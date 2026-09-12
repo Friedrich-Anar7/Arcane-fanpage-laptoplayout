@@ -688,7 +688,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 #Profiles {
   display: block;  position: inherit;
-  height: 580dvh;  min-width: 100%;
+  height: auto;  min-width: 100%;
+  padding-bottom: 8rem !important;
   background:
   radial-gradient(circle at top right,#4afff917, transparent 26%),
   radial-gradient(circle at bottom left,rgba(5, 254, 167, 0.097), transparent 15%),
