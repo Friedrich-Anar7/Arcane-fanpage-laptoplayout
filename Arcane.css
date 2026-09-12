@@ -1,0 +1,2153 @@
+@font-face {
+  font-family: 'Spectral-Italic';
+  src: url('Spectral-Italic.ttf');
+}
+
+@font-face {
+  font-family: "body";
+  src: url("Spectral-Regular.ttf")
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('Cinzel-Variable.ttf')
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url('IBMPlexMono.ttf')
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("NotoSerif.ttf")
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("Oswald-SemiBold.ttf")
+}
+
+@font-face {
+  font-family: inter;
+  src: url("Inter-VariableFont_opsz\,wght.ttf")S
+}
+:root {
+  color-scheme: dark;
+  --lightgold: rgb(248, 235, 163);
+  --muted: #8a9499;
+  --text-gold: #c7c5b7;
+  --ink-void:      #0a0d14;
+  --ink-panel:     #0f182a;
+  --ink-panel-2:   #101829;
+  --brass:         #c9a227;
+  --brass-bright:  #f4d35e;
+  --brass-dim:     #7a6420;
+  --hextech-blue:  #5fd4ff;
+  --hextech-dim:   #2e6b7d;
+  --parchment:     #e8e3d3;
+  --parchment-dim: #9a9a8f;
+  --rule:          rgba(201, 162, 39, 0.18);
+}
+
+* {
+  margin: 0;  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* Start page1 */
+.page1 {
+  min-height: 100vh;
+  display: flex;
+  background:
+  radial-gradient(ellipse 60% 50% at 18% 25%, rgba(165, 129, 10, 0.16), transparent 60%),
+  radial-gradient(ellipse 60% 50% at 85% 75%, rgba(50, 6, 137, 0.141), transparent 60%),
+  linear-gradient(180deg, #0a0d10 0%, #07090a 60%, #07090a 100%);
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  right: 27%;
+}
+.Arcane-title {
+  font-family: 'Cinzel', serif;
+  font-size: 9rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+
+  background: linear-gradient(
+  95deg,
+  #fbd635bd 0%, #ffd000c9 10%,
+  #e0aa2285 45%,
+  #8c2bf3ca 77%,
+  #7f1eedb2 80%, #4003bbad 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
+
+.netflix-row {
+  font-family: "IBM Plex Mono";
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: rgba(196,181,253,0.5);
+  padding-bottom: 0.75rem;
+}
+#netflix {
+  color: rgba(255, 219, 18, 0.748)
+}
+
+.L-OF-L {
+  margin-left: 7rem;
+  letter-spacing: 0.25rem;
+  font-size: 1.34;
+  letter-spacing: 0.24;
+  color: rgba(196,181,253,0.5);
+  text-transform: uppercase;
+  margin-bottom: 1.25;
+}    
+
+.top {
+  background-color: rgba(255, 232, 119, 0.067);
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  height: 3rem;  width: 100%;
+  justify-content: space-between;
+  border-block-end:1px solid rgba(100, 104, 58, 0.61);
+}
+.top-center {
+  margin-right: -9.5rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.7em;
+  line-height: 2;
+  text-transform: uppercase;
+  gap: 1rem;
+  font-weight: 250;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  padding: 1rem;
+}
+.top-center a {
+  text-decoration: none;
+  color: rgb(160, 157, 125);
+}
+.top-center a:hover {color: rgb(253, 238, 157);}
+body:has(#Series:target) .top-center a[href="#Series"],
+body:has(#Season-I:target) .top-center a[href="#Season-I"],
+body:has(#Season-II:target) .top-center a[href="#Season-II"],
+body:has(#Legacy:target) .top-center a[href="#Legacy"] {
+  color: rgb(253, 238, 157);
+}
+.top-left {
+  padding-left: 1.25rem;
+  font-family: "Cinzel";
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  background: linear-gradient(
+    to left,
+    rgba(165, 143, 15, 0.755),
+    rgba(255, 217, 0, 0.859)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+}
+.top-right {
+  display: flex;
+  margin-right: 2rem;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+.story h2, .characters h2 {
+  color:rgba(220, 196, 61, 0.859);
+  letter-spacing: 0.15rem;
+  font-family: "Cinzel";
+  margin: 0;  padding: 0;
+  display: inline-block;
+  text-decoration: none;
+}
+.story h2:hover, .characters h2:hover { color: rgba(254, 232, 104, 0.859)}
+
+/* End page1 */
+
+
+
+/* Start-Series */
+#Series {
+  min-height: 260vh;  width: auto;
+  background: 
+    radial-gradient(ellipse at 95% 43%, rgba(120, 8, 172, 0.125), transparent 25%),
+    radial-gradient(circle at 20% 85%, rgba(3, 227, 247, 0.097), transparent 28%),
+    radial-gradient(circle at 90% 80%, rgba(120, 8, 172, 0.093), transparent 28%),
+    linear-gradient(to top,rgb(4, 6, 9) 0%, #040507 50%);
+  overflow-x: hidden;
+}
+.sereis {
+  position: relative;
+}
+
+.series-video1 {
+  position: relative;
+  height: 75vh;  width: 100vw;
+}
+.series-video1 video {
+  object-fit: cover;  width: 100vw;  height: 75vh;
+}
+.video-fade {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  background: linear-gradient(
+      to bottom,
+      transparent 30%,
+      rgb(4, 6, 9) 100%
+  );
+  pointer-events: none;
+}
+
+.series-hr {
+  margin-top: 0;
+  margin-bottom: 3rem;  margin-left: 2rem;
+  height: 1px;
+  width: 83%;
+  border: none;
+  background: 
+    linear-gradient(to left, rgb(91, 54, 117), rgb(120, 114, 72))
+  ;
+}
+
+.sereis {
+  display: flex;
+  height: 100%;  width: 100%;
+}
+.series-top {
+  padding-top: 5rem;  margin-bottom: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.series-top h1{
+  font-family: Cinzel;
+  text-align: center;
+  color: var(--lightgold);
+  font-size:  6rem;
+}
+.series-top h4 {
+  text-align: center;
+  font-size: 0.7;
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  font-weight:200;
+  color: var(--muted);  letter-spacing: 0.09rem;
+}
+.series-top h4 span {
+  color: rgb(182, 97, 251)
+}
+
+.series-middle {
+  display: flex;
+  gap: 3rem;
+}
+
+.series-middle .series-img {
+  height: 34.5rem;
+  position: relative;
+  width: 24rem;
+  padding: 0.2rem;
+  border: 1.5px solid rgb(184, 169, 80);
+  background: linear-gradient(to top, rgba(13, 164, 164, 0.279),rgba(254, 219, 115, 0.367));
+  cursor: pointer;
+}
+.series-middle #series-img {
+  margin-left: 4rem;
+  position: relative;
+  width: 24rem;
+  height: 34.5rem;
+}
+.series-middle #series-img::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;
+  border: 1.5px solid rgb(184, 169, 80);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.series-middle .body-text {
+  font-family: NotoSerif;  font-size: 1.1rem;
+  line-height: 2.3rem;
+  width: 75%;
+  word-spacing: 0.08rem;  letter-spacing: 0.02rem;
+  color: var(--text-gold)
+}
+.series-middle .body-text::first-letter {
+  font-size: 5rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.5rem;
+  color: var(--lightgold);
+  font-family: Cinzel;
+  font-weight: 600
+}
+.cities {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.series-piltover, .series-zaun {
+  padding: 1rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.series-piltover{
+  border: 1px solid rgb(148, 135, 60);
+  background-color: rgba(208, 188, 77, 0.09);
+  color: rgb(254, 232, 105)
+}
+.series-zaun {
+  border: 1px solid rgb(63, 113, 103);
+  background-color: rgba(52, 136, 128, 0.104);
+  color: rgb(89, 242, 242);
+}
+.series-piltover:hover{
+  border: 1px solid rgb(223, 201, 81);
+  background-color: rgba(208, 188, 77, 0.275);
+  transform: translateY(-0.5rem)
+}
+.series-zaun:hover {
+  border: 1px solid rgb(76, 171, 152);
+  background-color: rgba(52, 136, 128, 0.368);
+  transform: translateY(-0.5rem)
+}
+.cities dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: 65vh;
+  width: 75vw;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.cities dialog::backdrop {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 13, 16, 0.75) 0%,
+    rgba(4, 6, 9, 0.92) 100%
+  );
+  backdrop-filter: blur(6px);
+}
+#piltoverDialog {
+  border: 2px solid rgb(162, 148, 70);
+  background-color: hsl(54, 52%, 18%);
+}
+#zaunDialog {
+  border: 2px solid rgb(70, 162, 137);
+  background-color: hsl(165, 84%, 12%);
+}
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;  outline: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.15rem 0.6rem;
+  transition: 0.4s;
+}
+#piltoverDialog .close {
+  border: 1px solid rgb(168, 153, 68);
+  background-color: rgb(99, 90, 29);
+}
+#zaunDialog .close {
+  border: 1px solid rgb(46, 201, 152);
+  background-color: rgb(35, 77, 58);
+}
+#zaunDialog .close:hover {
+  border: 1px solid rgb(91, 251, 200);
+  background-color: rgb(35, 171, 110);
+  font-size: 1.25rem;  padding: 0.18rem 0.65rem;
+}
+#piltoverDialog .close:hover {
+  border: 1px solid rgb(251, 224, 91);
+  background-color: rgb(171, 162, 35);
+  font-size: 1.25rem;  padding: 0.18rem 0.65rem;
+}
+#zaunDialog .close:active {  box-shadow: 0 0 15px rgba(5, 159, 95, 0.744);}
+#piltoverDialog .close:active {  box-shadow: 0 0 15px rgba(179, 198, 9, 0.744);}
+
+#piltoverDialog .body,
+#zaunDialog .body {
+  margin: 2rem 3rem;
+  line-height: 1.8rem;
+  font-family: "body";
+  font-size: 1.2rem;
+}
+#zaunDialog .body { color: rgb(167, 222, 209)}
+#piltoverDialog .body { color: rgb(218, 212, 179)}
+
+.bottomPiltoverDialog,
+.bottomZaunDialog {
+  height: 25vh;  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-left: 3rem;
+}
+.bottomPiltoverDialog { margin-top: -1.5rem;}
+
+.bottomPiltoverDialog .value-piltover,
+.bottomPiltoverDialog .key-piltover,
+.bottomZaunDialog .value-zaun,
+.bottomZaunDialog .key-zaun {
+  color: var(--muted);
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 0;
+}
+.bottomZaunDialog .value-zaun { color: rgb(97, 223, 215);}
+.bottomPiltoverDialog .value-piltover { color: rgb(251, 231, 146);}
+
+.bottomPiltoverDialog p,
+.bottomZaunDialog p { display: grid;  grid-template-columns: 1fr 3fr;}
+
+.bottomPiltoverDialog hr,
+.bottomZaunDialog hr {  border: none;  height: 1px;  background-color: rgba(109, 109, 109, 0.368);}
+
+.topZaunDialog,
+.topPiltoverDialog { height: 12%;  width: 100%;  display: flex;  align-items: center;}
+
+.topZaunDialog { background-color: rgb(5, 52, 42);  border-block-end: 1px solid rgb(14, 69, 63);}
+.topPiltoverDialog { background-color: hsl(50, 57%, 16%);  border-block-end: 1px solid hsla(52, 45%, 33%, 0.466);}
+
+.topPiltoverDialog h4,
+.topZaunDialog h4 {
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  margin-left: 1.5rem;
+}
+.topZaunDialog h4 .undercity { letter-spacing: 0.3rem; color: rgb(79, 240, 211)}
+.topPiltoverDialog h4 .progress { letter-spacing: 0.3rem; color: rgb(255, 235, 154)}
+
+.topZaunDialog h4 span:not(.undercity) {
+  font-size: 3rem;
+  color: rgb(3, 179, 118)
+}
+.topPiltoverDialog h4 span:not(.progress) {
+  font-size: 2.8rem;
+  font-family: Cinzel !important;
+  color: rgb(210, 215, 68)
+}
+
+.series-bottom {
+  margin-top: 1.5rem;
+  display: flex;  gap: 5rem;
+  width: 100%;  height: auto;
+}
+.series-video2 {
+  height: 90%;  width: 97%;
+  display: flex;  flex-direction: column;
+  margin-right: 1.5rem;
+}
+.series-video2 video {
+  object-fit: cover;
+  height: 50vh; 
+  padding: 0.19rem 0.14rem 0.15rem 0.15rem;
+  background: 
+    linear-gradient(to left, rgba(151, 30, 184, 0.489), rgba(13, 164, 164, 0.279));
+}
+
+.series-video2 h1 {
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  display: inline-block;
+  color: rgb(69, 147, 147);
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;  padding-bottom: 0.4rem;
+}
+.series-video2 h1::before {
+  content: "▸";
+  color: rgba(43, 234, 234, 0.853);
+  pointer-events: none;
+}
+
+.series-info h4{
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 250;
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+}
+.series-info a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+.text-link > :not(.and) {
+  color: rgb(99, 205, 205);
+}
+.series-info {
+  background-color: #132629a5;
+  line-height: 2.5rem;
+  padding: 1rem 0 0 1.5rem;
+  margin: 1.5rem 0 0 4rem;
+  width: 38rem;
+}
+.genre-value {
+  line-height: 1rem;
+}
+.key {
+  color: grey
+}
+
+/* End-Series */
+
+
+/* Starts-Season I*/
+
+#Season-I {
+  position: relative;
+  overflow: hidden;
+  height: 190vh;  width: 100%;
+  background: 
+    radial-gradient(ellipse 55% 45% at 12% 8%, rgba(65,185,245,.09), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 90% 45%, rgba(148, 5, 220, 0.118), transparent 80%),
+    linear-gradient(to top, rgb(0, 8, 10), rgb(8, 13, 15));
+}
+#Series .fracture-bg,
+#Season-I .fracture-bg,
+#SeasonOne-episodes .fracture-bg,
+#SeasonTwo-episodes .season2-fracture-bg,
+#Season-II .S2-texture {
+  position:absolute;
+  inset:0;
+  top: 0;
+  bottom: 0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.6;
+  height: 100%;
+}
+#Season-I .fracture-bg svg,
+#SeasonOne-episodes .fracture-bg svg,
+#SeasonTwo-episodes .season2-fracture-bg svg,
+#Season-II .S2-texture svg {
+  width:100%;
+  height:100%;
+  display: block;
+}
+
+.left-right {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  padding: 0 2rem;
+}
+.left-right hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(14, 60, 113, 0.652);
+  width: 90%;  margin: 3.5rem auto 1.5rem;
+  box-shadow: 0 0 0.5rem rgba(24, 113, 152, 0.299);
+}
+
+body a{ text-decoration: none;  color: inherit;}
+
+.S2-Left :is(h2, h3, p),
+.season1Left :is(h2, h3, p) { text-align: center;  padding: 0.6rem;}
+.S2-Left,
+.season1Left  {
+  margin-top: 7rem;
+  height: 80%;  width: auto;
+}
+.S2-eyebrow,
+.S1-eyebrow {
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  color: rgb(90, 62, 114)
+}
+.S1-date { color: rgb(46, 156, 181);}
+.S2-arcane,
+.S1-arcane {
+  font-family: Cinzel;
+  font-size: 8rem;
+  text-box-trim: trim-start;
+  text-box-edge: cap alphabetic;
+  background: linear-gradient(
+    to top,
+    rgb(8, 61, 80) 0%,
+    rgb(50, 187, 255) 50%,
+    rgb(1, 29, 40) 100%
+  ); 
+   -webkit-background-clip: text;  background-clip: text;
+  -webkit-text-fill-color: transparent;  color: transparent;
+}
+.S1-LOL {margin-top: -2rem;}
+.S2-LOL,
+.S1-LOL {
+  font-family: Cinzel;
+  font-size: 1.2rem;
+  letter-spacing: 0.35rem;
+  font-weight: 600;
+  background: linear-gradient(
+    to top,
+  rgb(32,30,70) 0%,     
+  rgb(106,99,224) 45%,   
+  rgb(20,19,48) 100%
+  ); 
+   -webkit-background-clip: text;  background-clip: text;
+  -webkit-text-fill-color: transparent;  color: transparent;
+}
+.S2-season2,
+.S1-season1 {
+  font-family: Cinzel;
+  font-size: 2.2rem;
+  letter-spacing: 0.5rem;
+  text-box-trim: trim-start;
+  text-box-edge: cap alphabetic;
+  color: rgb(9, 144, 168);
+}
+.S1LeftBottom {
+  display: flex;  gap: 1.5rem;
+  height: 20%;
+  justify-content: center;
+  align-items: end;
+}
+.S2-items,
+.S1-items {  
+  display: flex;
+  flex-direction: column;
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+}
+.S2-value {  font-size: 1.85rem; font-weight: 1000; color: rgb(232, 229, 40)}
+.S1-value { font-size: 1.85rem; font-weight: 1000; color: rgb(65,185,245)}
+.S2-key { color: rgba(65, 91, 80, 0.934)}
+.S1-key { color: rgba(79, 65, 91, 0.934)}
+
+.season1Right {
+  position: inherit;
+  display: flex;  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+}
+.season1Img {
+  border: 1px solid rgb(82, 91, 96);
+  background:
+    linear-gradient(to top left, rgba(108, 6, 148, 0.514), rgba(22, 123, 153, 0.481));
+  padding: 0.20rem;
+}
+.season1Img img {
+  height: 70vh;
+  border: 1px solid rgb(82, 91, 96);
+  display: block;
+}
+.S2-body,
+.S1-body {
+  margin-left: 3rem;
+  font-family: body;
+  text-align: center;
+  width: 80%;
+  line-height: 1.8rem;
+  word-spacing: 0.1rem;
+  color: rgb(149, 177, 195)
+}
+.S1-buttons {
+  display: flex;
+  gap: 1.9rem;
+}
+.season1Right button {
+  position: relative;
+  outline: none;
+  border-radius: 999px;
+  font-family: "IBM Plex Mono";
+  padding: 0.8rem 1rem;
+  margin-top: 2rem;
+  isolation: isolate;
+  transition: 0.25s;
+  color: var(--muted)
+}
+
+.S2-buttons .fmovies-button::before,
+.S1-buttons .fmovies-button::before { content: "Free"; color: rgb(40, 240, 170);}
+.S2-buttons .netflix-button::before,
+.S1-buttons .netflix-button::before { content: "Paid"; color: rgb(241, 12, 80)}
+.S1-buttons .fmovies-button { position: relative; border: 1px solid rgb(118, 26, 155);  background-color: hsla(281, 83%, 26%, 0.334);}
+.S1-buttons .netflix-button { position: relative; border: none;  background: linear-gradient( to left, hsla(276, 83%, 26%, 0.334), hsla(204, 83%, 26%, 0.537));}
+.S1-buttons .netflix-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border: 1px solid transparent;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    to left,
+    hsl(271, 84%, 34%),
+    hsla(204, 84%, 33%, 0.989)
+  ) border-box;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.S1-buttons .netflix-button:hover {
+  background:
+    linear-gradient(
+      to left,
+      hsla(276, 92%, 49%, 0.334),
+      hsla(204, 90%, 43%, 0.537)
+    ) padding-box,
+    linear-gradient(
+      to left,
+      hsl(271, 87%, 48%),
+      hsla(204, 91%, 45%, 0.989)
+    ) border-box;
+
+  transform: scale(1.1);
+  color: white;
+}
+.S1-buttons .netflix-button:active {
+  box-shadow:
+    0 0 1rem rgba(122, 10, 227, 0.242),
+    0 0 1rem rgba(12, 149, 208, 0.215);
+}
+.S1-buttons .netflix-button:hover { border: none;  background: linear-gradient( to left, hsla(276, 92%, 49%, 0.334), hsla(204, 90%, 43%, 0.537)); transform: scale(1.1); color: white}
+.S1-buttons .fmovies-button:hover { border:1px solid rgb(157, 28, 208);  background-color: hsla(281, 86%, 50%, 0.334);  transform: scale(1.1); color: white}
+.S1-buttons .fmovies-button:active { box-shadow: 0 0 1rem rgba(152, 8, 230, 0.338);}
+.S1-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  min-width: 9rem;
+}
+.S2-buttons button:hover::before,
+.season1Right button:hover::before {
+  opacity: 1;
+}
+
+.season1Bottom {
+  position: relative;
+  height: 30%;  width: 100%;
+  display: flex;
+  justify-content: center;  align-items: center;
+  margin-top: 7.5rem;
+}
+.S2-trailers hr,
+.season1Bottom hr {
+  margin: auto;   margin-top: 0.25rem;
+  height: 1.5px;  width: 90%;
+  border: none;  outline: none;
+  background:
+    linear-gradient(
+      to right,
+      rgba(35, 134, 176, 0.456) 0%,
+      rgba(132, 32, 179, 0.451) 95%)
+}
+.season1Bottom hr {margin-bottom: 2rem;}
+.S1-trailers video {
+  object-fit: cover;
+}
+.S1-trailers {
+  display: flex;  gap: 2.5rem;
+  justify-content: center;   align-items: center;
+  justify-self: center;
+  height: 80%;  width: 90%;  
+}
+.S2-trailers header h2,
+.season1Bottom header h2 {
+  display: inline-block;
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: rgb(54, 172, 219);
+  font-weight: 600;
+  margin-left: 4.4rem;
+}
+.S2-trailers header span,
+.season1Bottom header span {
+  font-family: "IBM Plex Mono";
+  margin-left: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: rgba(79, 65, 91, 0.934)
+}
+.S1-trailer {
+  position: relative;
+  display: flex;
+  justify-content: center;  align-items: center;
+  height: 17rem;  width: 30rem;
+  border: 1.5px solid rgba(8, 58, 97, 0.562);
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgb(34, 112, 134);
+  background:
+    radial-gradient(circle at 95% 95%, rgba(52, 22, 95, 0.356), transparent 70%),
+    radial-gradient(ellipse at 23% 25%, rgba(19, 55, 84, 0.386), transparent 40%),
+    linear-gradient(to top, rgb(2, 13, 16));
+  cursor: pointer;
+  transition: 0.5s;
+}
+.S1-trailer:hover {
+  transform: scale(1.05);
+  border: 1.5px solid rgba(2, 90, 157, 0.714);
+  box-shadow: 0 0 1rem rgba(40, 88, 111, 0.373);
+  background:
+    radial-gradient(circle at 95% 95%, rgba(52, 22, 95, 0.356), transparent 80%),
+    radial-gradient(ellipse at 23% 25%, rgba(19, 55, 84, 0.386), transparent 60%),
+    linear-gradient(to top, rgb(2, 13, 16));
+}
+.S1-trailer:active {
+  transform: scale(1.06);
+  border-color: rgba(29, 133, 212, 0.714);
+  box-shadow: 0 0 2rem rgba(12, 129, 183, 0.373);
+  background:
+    radial-gradient(circle at 95% 95%, rgba(69, 16, 144, 0.282), transparent 80%),
+    radial-gradient(ellipse at 23% 25%, rgba(18, 99, 165, 0.264), transparent 60%),
+    linear-gradient(to top, rgb(2, 13, 16));
+}
+
+.S2-trailer h2,
+.S1-trailer h2 { transform: translateY(3rem)}
+.S2-trailer::before,
+.S1-trailer::before {
+  content: "▶";  padding-left: 0.25rem;
+  font-size: 1.75rem;
+  border-radius: 50%;
+  height: 3.5rem;  width: 3.5rem;
+  color: rgba(101, 24, 125, 0.79);
+  background-color: rgba(38, 114, 149, 0.195);
+  position: absolute;
+  top: 50%;  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+.S1-trailer:active::before {
+  height: 4rem;  width: 4rem;
+  font-size: 2rem;
+  color: rgba(145, 23, 182, 0.881);
+  background-color: rgba(22, 121, 166, 0.379);
+}
+.S2-dialog,
+.S1-dialog {
+  height: 70vh;  width: 85vw;
+  outline: none;  border: 2.5px solid rgba(14, 54, 76, 0.627);
+  margin: auto;  
+  overflow:hidden;
+  border-radius: 13px;
+  box-shadow: 0 0 3rem rgba(24, 30, 33, 0.164);
+}
+.S2-dialog {border: 2.5px solid rgba(143, 127, 39, 0.627) !important; box-shadow: 0 0 3rem rgba(92, 89, 61, 0.164) !important}
+.S2-dialog::backdrop,
+.S1-dialog::backdrop {
+  backdrop-filter: blur(3rem);
+}
+.S2-dialog video,
+.S1-dialog video {
+  height: 100%;  width: 100%;
+  object-fit: cover;
+}
+
+
+#SeasonOne-episodes {
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+  position: relative;
+  background:
+    linear-gradient(to top, rgb(0, 8, 10), rgb(5, 8, 9));
+}
+
+#SeasonOne-episodes:has(#tab-1[aria-selected="true"]) {  background: radial-gradient(ellipse at 50% 10%, rgba(0, 208, 255, 0.085), transparent 70%),  linear-gradient(to top, rgb(0, 8, 10), rgb(5, 8, 9))}
+#SeasonOne-episodes:has(#tab-2[aria-selected="true"]) {  background: radial-gradient(ellipse at 50% 10%, rgba(187, 0, 255, 0.097), transparent 70%),  linear-gradient(to top, rgb(0, 8, 10), rgb(5, 8, 9))}
+#SeasonOne-episodes:has(#tab-3[aria-selected="true"]) {  background: radial-gradient(ellipse at 50% 10%, rgba(255, 0, 93, 0.088), transparent 70%),  linear-gradient(to top, rgb(0, 8, 10), rgb(5, 8, 9))}
+#SeasonOne-episodes:has(#tab-1[aria-selected="true"]) .tabs-eyebrow p { color: rgb(66, 255, 255);}
+#SeasonOne-episodes:has(#tab-2[aria-selected="true"]) .tabs-eyebrow p { color: rgb(187, 43, 248)}
+#SeasonOne-episodes:has(#tab-3[aria-selected="true"]) .tabs-eyebrow p { color: rgb(255, 44, 83)}
+
+body:has(#tab-1[aria-selected="true"]) { --section-color: rgba(7, 14, 16, 0.993);}
+body:has(#tab-2[aria-selected="true"]) { --section-color: rgb(11, 7, 17);}
+body:has(#tab-3[aria-selected="true"]) { --section-color: rgb(14, 7, 8);}
+body:has(#tab-1[aria-selected="true"]) .S1-intro h1 { color: rgb(20, 163, 188)}
+body:has(#tab-2[aria-selected="true"]) .S1-intro h1 { color: rgb(169, 25, 201) }
+body:has(#tab-3[aria-selected="true"]) .S1-intro h1 { color: rgb(218, 25, 67) }
+body:has(#tab-1[aria-selected="true"]) .tabs-eyebrow::before  { color: rgba(20, 163, 188, 0.723);  filter: drop-shadow(0 0 0.25rem rgba(23, 255, 255, 0.568));}
+body:has(#tab-2[aria-selected="true"]) .tabs-eyebrow::before  { color: rgba(160, 25, 190, 0.797);  filter: drop-shadow(0 0 0.25rem rgba(232, 23, 255, 0.568)); }
+body:has(#tab-3[aria-selected="true"]) .tabs-eyebrow::before  { color: rgba(218, 25, 67, 0.778);  filter: drop-shadow(0 0 0.25rem rgba(255, 23, 93, 0.568)); }
+body:has(#tab-1[aria-selected="true"]) .tabs-eyebrow::after  { color: rgb(20, 163, 188, 0.723);  filter: drop-shadow(0 0 0.25rem rgba(23, 255, 255, 0.568)); }
+body:has(#tab-2[aria-selected="true"]) .tabs-eyebrow::after  { color: rgb(160, 25, 190, 0.797);  filter: drop-shadow(0 0 0.25rem rgba(232, 23, 255, 0.568)); }
+body:has(#tab-3[aria-selected="true"]) .tabs-eyebrow::after  { color: rgb(218, 25, 67, 0.778);  filter: drop-shadow(0 0 0.25rem rgba(255, 23, 93, 0.568)); }
+.S2-intro,
+.S1-intro {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+}
+.S2-intro video,
+.S1-intro video {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(0.9) brightness(0.82);
+}
+.S1-intro::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 70%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(5, 7, 8, 0.416) 25%,
+    rgba(5, 7, 8, 0.697) 55%,
+    var(--section-color) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.intro-texts {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  right: 3rem;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  animation: intro-rise 0.9s ease-out both;
+}
+.S2-intro h4,
+.S1-intro h4 {
+  font-family: Oswald, monospace;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin: 0 0 0.25rem;
+  padding-left: 0.6rem;
+  border-left: 2px solid rgb(79, 203, 203);
+}
+.S2-intro h4 { border-color: rgb(74, 210, 133)}
+.S2-intro h3,
+.S1-intro h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  letter-spacing: 0.05em;
+  color: hsl(48, 97%, 72%);
+  opacity: 0.8;
+  margin: 0;
+}
+.S2-intro h3 {color: rgb(244, 18, 67) !important}
+.S2-intro h1,
+.S1-intro h1 {
+  font-family: Cinzel, monospace;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: hsl(204, 91%, 41%);
+  margin: 0.25rem 0 0;
+}
+
+.S2-tabs-eyebrow,
+.tabs-eyebrow {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 66.5%;
+  font-family: "IBM Plex Mono";
+  padding: 2rem ;
+  font-size: 0.8rem;
+}
+.S2-case-file,
+.case-file {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--muted) !important;
+}
+.S2-tabs-eyebrow::before,
+.S2-tabs-eyebrow::after,
+.tabs-eyebrow::before,
+.tabs-eyebrow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 3rem;  
+  height: 5rem;
+  pointer-events: none;
+}
+.S2-tabs-eyebrow::before,
+.tabs-eyebrow::before {
+  left: -2rem;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.S2-tabs-eyebrow::after,
+.tabs-eyebrow::after {
+  right: -2rem;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+
+.S2-act-tabs h2,
+.act-tabs h2 { 
+  position: relative;
+  font-family: Oswald;  
+  font-size: 2rem; 
+  word-spacing: 0.4rem;  
+  letter-spacing: 0.2rem;  
+  padding-left: 1rem;  
+  margin-bottom: 1rem;
+}
+.act-tabs #tab-1 h2 { color: rgb(96, 250, 255);}
+.act-tabs #tab-2 h2 { color: rgb(181, 45, 205);}
+.act-tabs #tab-3 h2 { color: rgb(222, 26, 81);}
+.act-tabs #tab-1::before { background-color: rgb(105, 220, 255);}
+.act-tabs #tab-2::before { background-color: rgb(216, 51, 238);}
+.act-tabs #tab-3::before { background-color: rgb(239, 39, 92);}
+.act-tabs #tab-1 h2::before { background-color: rgb(120, 228, 228)}
+.act-tabs #tab-2 h2::before { background-color: rgb(196, 79, 216)}
+.act-tabs #tab-3 h2::before { background-color: rgb(239, 48, 102)}
+.S2-act-tabs > div h2::before,
+.act-tabs > div h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 0;
+  transform: translateY(-50%);
+  transition: height 0.3s ease;
+}
+.S2-act-tabs > div[aria-selected="true"] h2::before,
+.act-tabs > div[aria-selected="true"] h2::before {
+  height: 100%;
+}
+
+.act-tabs #tab-1[aria-selected="true"] { 
+  border:1px solid rgba(50, 93, 96, 0.873);
+  border-top: none; 
+  filter: drop-shadow(0 0 0.9rem rgba(60, 248, 248, 0.082));
+  background: 
+    radial-gradient( 
+      ellipse at 15% 15%,
+      rgba(41, 150, 154, 0.303), transparent 60%
+      ),
+    radial-gradient(
+      ellipse at 95% 95%,
+      rgba(3, 145, 158, 0.182), transparent 50%
+    ),
+    linear-gradient(
+      to top,
+      rgb(4, 15, 18));
+}
+.act-tabs #tab-2[aria-selected="true"] { 
+  border:1px solid #5d2c6ffb;
+  border-top: none; 
+  filter: drop-shadow(0 0 0.9rem rgba(190, 48, 238, 0.088));
+  background: 
+    radial-gradient( 
+      ellipse at 15% 15%,
+      rgba(176, 20, 211, 0.303), transparent 60%
+      ),
+    radial-gradient(
+      ellipse at 95% 95%,
+      rgba(124, 3, 158, 0.182), transparent 50%
+    ),
+    linear-gradient(
+      to top,
+      rgb(4, 15, 18));
+}
+.act-tabs #tab-3[aria-selected="true"] { 
+  border:1px solid rgba(131, 17, 42, 0.611);
+  border-top: none; 
+  filter: drop-shadow(0 0 0.9rem rgba(241, 33, 85, 0.067));
+  background: 
+    radial-gradient( 
+      ellipse at 15% 15%,
+      rgba(207, 4, 41, 0.304), transparent 60%
+      ),
+    radial-gradient(
+      ellipse at 95% 95%,
+      rgba(158, 3, 37, 0.182), transparent 50%
+    ),
+    linear-gradient(
+      to top,
+      rgb(4, 15, 18));
+}
+.S2-act-tabs p,
+.act-tabs p { font-family: "inter";  text-transform: uppercase;  font-size: 0.8rem;  line-height: 1.3rem;}
+.S2-tab-date,
+.tab-date {color: var(--muted);  line-height: 1.6rem}
+.S2-act-tabs,
+.act-tabs {  display: flex;   margin: 0 15.4rem;}
+.act-tabs #tab-1 { 
+  position: relative;
+  overflow: hidden;
+  background: 
+  radial-gradient( 
+    ellipse at 15% 15%,
+    rgba(41, 150, 154, 0.116), transparent 60%
+    ),
+  radial-gradient(
+    ellipse at 95% 95%,
+    rgba(3, 145, 158, 0.062), transparent 50%
+  ),
+  linear-gradient(
+    to top,
+    rgb(3, 11, 14));
+}
+.act-tabs #tab-2 { 
+  position: relative;
+  overflow: hidden;
+  background: 
+  radial-gradient( 
+    ellipse at 15% 15%,
+    rgba(160, 30, 211, 0.09), transparent 60%
+    ),
+  radial-gradient(
+    ellipse at 95% 95%,
+    rgba(135, 3, 158, 0.073), transparent 50%
+  ),
+  linear-gradient(
+    to top,
+    rgb(3, 11, 14));
+}
+.act-tabs #tab-3 { 
+  position: relative;
+  overflow: hidden;
+  background: 
+  radial-gradient( 
+    ellipse at 15% 15%,
+    rgba(220, 19, 66, 0.092), transparent 60%
+    ),
+  radial-gradient(
+    ellipse at 95% 95%,
+    rgba(158, 3, 44, 0.075), transparent 50%
+  ),
+  linear-gradient(
+    to top,
+    rgb(3, 11, 14));
+}
+#tab-1::after { content: "I"; color: rgb(22, 255, 255);}
+#tab-2::after { content: "II"; color: rgb(228, 54, 255);}
+#tab-3::after { content: "III"; color: rgb(255, 15, 79)}
+
+.S2-act-tabs > div::after,
+.act-tabs > div::after {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  position: absolute;
+  top: -0.3em;
+  right: 0.1em;
+  font-size: 6.5rem;
+  line-height: 1;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.S2-act-tabs > div,
+.act-tabs > div {
+  position: relative;
+  flex: 1;
+  max-height: 20vh;
+  padding: 1.5rem 4rem 1rem 2rem;
+  cursor: pointer;
+  border: 0.5px solid rgba(26, 38, 47, 0.792);
+  background-color: rgba(12, 20, 24, 0.438);
+}
+.S2-act-tabs > div[aria-selected="true"],
+.act-tabs > div[aria-selected="true"] {  background-color: hsla(197, 79%, 9%, 0.525) !important;}
+.S2-act-tabs > div::before,
+.act-tabs > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+.S2-act-tabs > div[aria-selected="true"]::before,
+.act-tabs > div[aria-selected="true"]::before {  width: 100%;}
+
+.S2-act-header,
+.act-header {
+  position: relative;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-family: Oswald;
+  word-spacing: 0.4rem;  
+  letter-spacing: 0.2rem; 
+  font-size: 1.8rem; 
+  gap: 1rem;
+}
+.S2-act-header::after { background-color: rgba(176, 111, 127, 0.614) !important;  filter: drop-shadow(0 0 0.23rem rgba(255, 62, 97, 0.371)) !important}
+.S2-act-header::after,
+.act-header::after {
+  content: "";
+  inset: 0;
+  height: 1px;
+  background-color: var(--muted);
+  flex: 1;
+  padding-left: 2rem;
+  background-color: rgba(163, 155, 100, 0.614);
+  filter: drop-shadow(0 0 0.23rem rgba(255, 226, 62, 0.371));
+  opacity: 0.65;
+}
+.S2-act-header span,
+.act-header span {
+  color: rgb(240, 211, 49);
+  font-family: inter;
+  font-size: 1rem;
+  opacity: 0.6;
+  letter-spacing: 0;
+  margin-right: 1rem;
+  text-shadow: 0 0 0.3rem rgba(245, 219, 74, 0.415);
+}
+#act1-header { color: rgb(96, 250, 255);  background-color:rgba(23, 193, 193, 0.026);}
+#act2-header { color: rgb(181, 45, 205); background-color:rgba(188, 66, 241, 0.026)}
+#act3-header { color: rgb(222, 26, 81); background-color:rgba(241, 66, 116, 0.026)}
+
+#panel-1 img { border: 1px solid rgba(48, 130, 147, 0.668)}
+#panel-2 img { border: 1px solid rgba(186, 56, 241, 0.668)}
+#panel-3 img { border: 1px solid rgba(236, 43, 98, 0.668)}
+
+.S2-episode img,
+.episode img{
+  width: 11.25rem;  height: 6.3rem;   
+  object-fit: cover;
+}
+.S2-episode,
+.episode {
+  display: grid;
+  grid-template-columns: 11.25rem 1fr;
+  gap: 1rem;
+  border: 1px solid rgba(23, 28, 37, 0.905);
+  padding: 1.65rem 1.4rem;
+}
+.S2-act-panel,
+.act-panel { display: none;}
+.S2-act-panel.active,
+.act-panel.active { display: block;}
+.S2-act-panels,
+.act-panels {
+  /* margin: 0 clamp(2rem, 15.5rem, 19rem); */
+  margin: 0 auto;
+  width: 66.68%;
+  padding-bottom: clamp(4rem, 8rem, 8rem);
+}
+
+#panel-1 { border: 1px solid rgba(10, 94, 113, 0.764);}
+#panel-1 .episode {border: 1px solid rgba(16, 57, 66, 0.342);}
+#panel-2 { border: 1px solid rgba(97, 12, 131, 0.764);}
+#panel-2 .episode {border: 1px solid rgba(43, 16, 66, 0.342);}
+#panel-3 { border: 1px solid rgba(113, 10, 34, 0.764);}
+#panel-3 .episode {border: 1px solid rgba(66, 16, 23, 0.342);}
+
+.S2-episode-header,
+.episode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  font-family: Oswald;
+  color: white;
+}
+.S2-episode-date,
+.episode-date {
+  margin-left: auto;
+  white-space: nowrap;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.act-1E { color: rgb(67, 237, 237);}
+.act-2E { color: rgb(197, 35, 242);}
+.act-3E { color: rgb(255, 44, 125);}
+.S2-episode-description,
+.episode-description {
+  font-family: inter;
+  margin: 0.5rem 0;
+  color: var(--muted);
+}
+.S2-episode-meta,
+.episode-meta {
+  font-family: inter;
+  display: flex;
+  word-spacing: 0.5rem;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
+.S2-top-rated,
+.top-rated { color: rgb(242, 218, 84);}
+
+section .S2-showcase,
+section .showcase {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  width: 85%;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+} 
+.award-2025,
+.award-2022 {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  letter-spacing: 0.02em;
+  color: var(--parchment);
+  margin: 0 0 0.4rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.award-2025 .sub,
+.award-2022 .sub {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: var(--parchment-dim);
+  margin-top: 0.55rem;
+}
+.S2-awards,
+.S1-awards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2.5rem 0 3rem;
+}
+
+@media (max-width: 44rem) {
+  .S1-awards { grid-template-columns: 1fr; }
+  .S2-awards { grid-template-columns: 1fr;}
+}
+
+body:has(#tab-1[aria-selected="true"]) .plaque {  background: linear-gradient(180deg, rgba(12, 173, 176, 0.292), rgba(6, 56, 70, 0.385));}
+body:has(#tab-2[aria-selected="true"]) .plaque {  background: linear-gradient(180deg, rgba(138, 12, 176, 0.292), rgba(55, 6, 70, 0.385));}
+body:has(#tab-3[aria-selected="true"]) .plaque {  background: linear-gradient(180deg, rgba(176, 12, 45, 0.292), rgba(70, 6, 21, 0.385));}
+
+.S2-plaque,
+.plaque {
+  position: relative;
+  border: 1px solid var(--rule);
+  padding: 1.75rem 1.75rem 1.5rem;
+}
+.S2-plaque::before,
+.S2-plaque::after,
+.plaque::before,
+.plaque::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: 0.7rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.6) inset;
+}
+.S2-plaque::before,
+.plaque::before { left: 0.7rem; }
+.S2-plaque::after,
+.plaque::after   { right: 0.7rem; }
+
+.annie-awards-2025::before,
+.annie-awards-2025::after,
+.annie-awards-2022::before,
+.annie-awards-2022::after { background: var(--brass); }
+
+.emmy-awards-2025::before,
+.emmy-awards-2025::after,
+.emmy-awards-2022::before,
+.emmy-awards-2022::after { background: var(--hextech-blue); }
+
+.S2-plaque-head,
+.plaque-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  margin-bottom: 1.3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.S2-plaque-count,
+.plaque-count {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 1;
+}
+.annie-awards-2025 .S2-plaque-count,
+.annie-awards-2022 .plaque-count {
+  color: var(--brass-bright);
+  text-shadow: 0 0 14px rgba(244, 211, 94, 0.3);
+}
+/* .annie-awards-2025 .S2-plaque-count {
+  color: rgb(255, 4, 84);
+  text-shadow: 0 0 14px rgba(244, 94, 136, 0.3);
+} */
+.emmy-awards-2025 .S2-plaque-count ,
+.emmy-awards-2022 .plaque-count {
+  color: var(--hextech-blue);
+  text-shadow: 0 0 14px rgba(95, 212, 255, 0.28);
+}
+
+.S2-plaque-name,
+.plaque-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--parchment);
+  letter-spacing: 0.015em;
+}
+.S2-plaque ul,
+.plaque ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.S2-plaque li,
+.plaque li {
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  color: var(--parchment-dim);
+  padding: 0.55rem 0 0.55rem 1.15rem;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.S2-plaque li:last-child,
+.plaque li:last-child { border-bottom: none; }
+
+.S2-plaque li::before,
+.plaque li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--brass-dim);
+}
+
+.emmy-awards-2022 li::before { color: var(--hextech-dim); }
+.emmy-awards-2025 li::before { color: rgba(46, 139, 86, 0.451); }
+
+.S2-plaque li:hover,
+.plaque li:hover {
+  color: var(--parchment);
+}
+.S2-rating,
+.S1-rating {
+  width: 90%;
+  margin: 0 auto;
+}
+.S2-rating h3,
+.S1-rating h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--parchment);
+  margin: 0 0 1.2rem;
+}
+
+.S2-scorecard,
+.scorecard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+  border: 1px solid rgba(92, 83, 30, 0.481);
+}
+body:has(#tab-1[aria-selected="true"]) .scorecard > div{  background-color: rgba(0, 105, 105, 0.337);}
+body:has(#tab-2[aria-selected="true"]) .scorecard > div{  background-color: rgba(88, 0, 105, 0.337);}
+body:has(#tab-3[aria-selected="true"]) .scorecard > div{  background-color: rgba(105, 0, 23, 0.337);}
+
+.S2-scorecard > div,
+.scorecard > div {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(85, 79, 39, 0.437);
+}
+.S2-scorecard dt,
+.scorecard dt {
+  font-size: 0.78rem;
+  color: var(--parchment-dim);
+  margin: 0 0 0.35rem;
+}
+.S2-scorecard dd,
+.scorecard dd {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--brass-bright);
+}
+
+
+#Season-II {
+  position: relative;
+  height: 190vh;  width: 100%;
+  background:
+    radial-gradient(ellipse 55% 45% at 18% 15%, rgba(251, 254, 35, 0.066), transparent 60%),
+    radial-gradient(ellipse 100% 55% at 80% 80%, rgba(35, 254, 174, 0.066), transparent 70%);
+    background-color: #060609;
+}
+
+.S2-left-right {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.S2-title { margin-top: 8rem; text-align: center;}
+.S2-date { color: rgb(255, 230, 87)}
+.S2-eyebrow { color: rgba(57, 122, 93, 0.564);  margin-bottom: 1rem;}
+.S2-arcane {
+  background: linear-gradient(
+    to top,
+    rgb(92, 86, 2) 0%,
+    rgb(255, 225, 73) 50%,
+    rgb(94, 94, 2) 100%
+  ); 
+   -webkit-background-clip: text;  background-clip: text;
+  -webkit-text-fill-color: transparent;  color: transparent;
+}
+.S2-LOL {
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to top,
+    rgb(2, 92, 40) 0%,
+    rgb(73, 255, 137) 50%,
+    rgb(2, 94, 43) 100%
+  ); 
+   -webkit-background-clip: text;  background-clip: text;
+  -webkit-text-fill-color: transparent;  color: transparent; 
+}
+.S2-season2 { color: rgb(217, 192, 48);  margin-bottom: 1rem;}
+.S2-body { width: 70%; margin: 0 auto; color: var(--text-gold);}
+.S2-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.S2-left,
+.S2-right { position: relative;  z-index: 1;}
+.S2-left hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(198, 177, 24, 0.412);
+  width: 90%;  margin: 3.5rem auto 1.5rem;
+  box-shadow: 0 0 0.5rem rgba(227, 199, 63, 0.299);
+}
+.S2-states {
+  display: flex;  gap: 3.5rem;
+  justify-content: center;  
+  text-align: center;
+  margin-top: 4.5rem;
+}
+.S2-key {margin-top: 1rem;}
+
+.S2-right { margin-top: 7rem !important;  margin: 0 auto;}
+.S2-img img{ 
+  height: 70dvh; 
+  width: 30dvw;
+  border: 3.5px solid #b1963c
+}
+.S2-img {
+  position: relative;
+  padding: 1rem;
+  transition: 0.4s;
+}
+.S2-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+
+  background-image:
+    /* 4 middle lines */
+    linear-gradient(#D4AF37, #D4AF37), /* top */
+    linear-gradient(#D4AF37, #D4AF37), /* left */
+    linear-gradient(#D4AF37, #D4AF37), /* bottom */
+    linear-gradient(#D4AF37, #D4AF37), /* right */
+
+    /* top-left */
+    linear-gradient(#D4AF37, #D4AF37),
+    linear-gradient(#D4AF37, #D4AF37),
+
+    /* top-right */
+    linear-gradient(#D4AF37, #D4AF37),
+    linear-gradient(#D4AF37, #D4AF37),
+
+    /* bottom-left */
+    linear-gradient(#D4AF37, #D4AF37),
+    linear-gradient(#D4AF37, #D4AF37),
+
+    /* bottom-right */
+    linear-gradient(#D4AF37, #D4AF37),
+    linear-gradient(#D4AF37, #D4AF37);
+
+  background-size:
+    3.5rem 2px,  /* top */
+    2px 7rem,  /* left */
+    3.5rem 2px,  /* bottom */
+    2px 7rem,  /* right */
+
+    3.5rem 2px,  /* top-left horizontal */
+    2px 3.5rem,  /* top-left vertical */
+
+    3.5rem 2px,  /* top-right horizontal */
+    2px 3.5rem,  /* top-right vertical */
+
+    3.5rem 2px,  /* bottom-left horizontal */
+    2px 3.5rem,  /* bottom-left vertical */
+
+    3.5rem 2px,  /* bottom-right horizontal */
+    2px 3.5rem;  /* bottom-right vertical */
+
+  background-position:
+    top center,
+    center left,
+    bottom center,
+    center right,
+
+    top left,
+    top left,
+
+    top right,
+    top right,
+
+    bottom left,
+    bottom left,
+
+    bottom right,
+    bottom right;
+
+}
+.S2-img:has(img:hover)::before {  
+  filter: drop-shadow(0 0 0.7rem rgba(36, 233, 167, 0.67));
+  background-image:
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc),
+    linear-gradient(#05a53adc, #05a53adc);
+}
+.S2-img:has(img:hover) { padding: 1.5rem;}
+.S2-img img:hover { box-shadow: 0 0 0.7rem rgba(33, 225, 123, 0.218); border-color: #05a53bbc ;}
+
+.S2-buttons {
+  position: relative;
+  margin-top: 2.4rem;
+  display: flex;  gap: 2.5rem;
+  justify-content: center;
+}
+.S2-buttons button {
+  font-family: "IBM Plex Mono";
+  outline: none;
+  border: 1px solid rgba(33, 173, 98, 0.63);
+  background-color: rgba(146, 4, 39, 0.668);
+  color: var(--muted);
+  padding: 0.8rem 1.3rem;
+  transition: 0.35s;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+.S2-buttons .fmovies-button {  background-color: rgba(2, 29, 46, 0.814);}
+.S2-buttons .netflix-button:hover,
+.S2-buttons .fmovies-button:hover { 
+  background-color: rgba(3, 65, 103, 0.832); 
+  border: 1px solid rgb(49, 255, 176);  
+  transform: scale(1.1);
+  color: rgba(9, 213, 87, 0.995);
+  box-shadow: 0 0 0.8rem rgba(0, 255, 128, 0.19);
+}
+.S2-buttons .netflix-button:hover { background-color: rgba(90, 2, 24, 0.842) !important;}
+.S2-buttons .netflix-button:active { box-shadow: 0 0 1rem rgba(142, 4, 29, 0.381);  border: 1px solid rgb(198, 3, 45); color: rgb(255, 0, 55)}
+.S2-buttons .fmovies-button:active { box-shadow: 0 0 1rem rgba(4, 94, 142, 0.381);  border: 1px solid rgb(3, 117, 198); color: rgb(0, 123, 255)}
+.S2-buttons button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  transform: translateY(150%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  min-width: 9rem;
+}
+
+.S2-trailers { margin-top: 7rem;}
+.S2-trailers header {
+  display: flex;
+  justify-content: flex-start !important;
+}
+.S2-trailer-x {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  gap: 2rem;
+  height: 43dvh;
+  width: 90%;
+  overflow-x: scroll !important;
+  margin: 0 auto;
+  z-index: 1;
+}
+.S2-trailer-x::-webkit-scrollbar { height: 0.1rem;}
+.S2-trailer-x::-webkit-scrollbar-thumb { background: linear-gradient(to left, rgba(82, 239, 176, 0.442) 0%, rgb(7, 196, 83) 50%, rgba(82, 239, 160, 0.442) 100%);  border-radius: 999px;}
+.S2-trailer-x::-webkit-scrollbar-track { background-color: none;}
+.S2-trailer {
+  position: relative;
+  display: flex;
+  justify-content: center;  align-items: center;
+  height: 17rem;  width: 30rem;
+  border: 1.5px solid rgba(12, 121, 55, 0.585);
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgba(34, 145, 69, 0.825);
+  background:
+    radial-gradient(ellipse at 23% 25%, #fffc3c1f, transparent 70%),
+    radial-gradient(ellipse at 95% 95%, rgba(25, 218, 128, 0.082), transparent 70%),
+    linear-gradient(to top, rgb(5, 10, 7));
+  cursor: pointer;
+  transition: 0.5s;
+}
+.S2-trailer:hover {
+  transform: scale(1.05);
+  border: 1.5px solid rgba(15, 136, 63, 0.937);
+  background:
+    radial-gradient(ellipse at 23% 25%, #fffc3c2d, transparent 70%),
+    radial-gradient(ellipse at 95% 95%, rgba(25, 218, 128, 0.189), transparent 70%),
+    linear-gradient(to top, rgb(5, 10, 7));
+  filter: drop-shadow( 0 0 1rem rgba(5, 134, 61, 0.14))
+}
+.S2-trailer:active {
+  transform: scale(1.06);
+  border: 1.5px solid rgba(9, 206, 88, 0.937);
+  background:
+    radial-gradient(ellipse at 23% 25%, #fffc3c46, transparent 70%),
+    radial-gradient(ellipse at 95% 95%, rgba(25, 218, 128, 0.27), transparent 70%),
+    linear-gradient(to top, rgb(5, 10, 7));
+  filter: drop-shadow( 0 0 2rem rgba(14, 222, 104, 0.14))
+}
+.S2-trailer::before { background-color: rgba(15, 208, 118, 0.203);  color: rgba(167, 149, 48, 0.718);}
+.S2-trailers hr { background: linear-gradient( to right, rgba(185, 165, 54, 0.385) 0%, rgba(18, 211, 102, 0.27)) !important;}
+.S2-trailers header h2 { color: rgba(240, 216, 81, 0.851);}
+.S2-trailers header span { display: flex;  align-self: end;  margin-bottom: 0.5rem; color:rgba(58, 134, 102, 0.934);}
+.S2-trailer:last-of-type { margin-right: 1rem;}
+.S2-trailer:first-child { margin-left: 1rem}
+.S2-trailer:active::before {
+  height: 4rem;  width: 4rem;
+  font-size: 2rem;
+  background-color:rgba(13, 249, 139, 0.305) ;
+  color:rgba(198, 179, 71, 0.893);
+}
+
+#SeasonTwo-episodes {
+  position: relative;
+  padding-top: 12rem;
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+
+#SeasonTwo-episodes > * {
+  position: relative;
+  z-index: 1;
+}
+
+.S2-act-tabs #S2-tab-1[aria-selected="true"] { 
+  border:1px solid rgba(50, 96, 75, 0.873);
+  border-top: none; 
+  filter: drop-shadow(0 0 0.9rem rgba(60, 248, 248, 0.082));
+  background: 
+    radial-gradient( 
+      ellipse at 15% 15%,
+      rgba(41, 154, 116, 0.303), transparent 60%
+      ),
+    radial-gradient(
+      ellipse at 95% 95%,
+      rgba(3, 158, 96, 0.182), transparent 50%
+    ),
+    linear-gradient(
+      to top,
+      rgb(5, 9, 9));
+}
+.S2-act-tabs #S2-tab-2[aria-selected="true"] { 
+  border:1px solid #552c6ffb;
+  border-top: none; 
+  filter: drop-shadow(0 0 0.9rem rgba(190, 48, 238, 0.088));
+  background: 
+    radial-gradient( 
+      ellipse at 15% 15%,
+      rgba(147, 20, 211, 0.303), transparent 60%
+      ),
+    radial-gradient(
+      ellipse at 95% 95%,
+      rgba(112, 3, 158, 0.182), transparent 50%
+    ),
+    linear-gradient(
+      to top,
+      rgb(4, 15, 18));
+}
+.S2-act-tabs #S2-tab-3[aria-selected="true"] { 
+  border:1px solid rgba(127, 131, 17, 0.611);
+  border-top: none; 
+  filter: drop-shadow(0 0 0.9rem rgba(241, 33, 85, 0.067));
+  background: 
+    radial-gradient( 
+      ellipse at 15% 15%,
+      rgba(255, 232, 27, 0.319), transparent 60%
+      ),
+    radial-gradient(
+      ellipse at 95% 95%,
+      rgba(255, 248, 32, 0.226), transparent 50%
+    ),
+    linear-gradient(
+      to top,
+      rgb(18, 17, 4));
+}
+.S2-act-tabs #S2-tab-1 { 
+  position: relative;
+  overflow: hidden;
+  background: 
+  radial-gradient( 
+    ellipse at 15% 15%,
+    rgba(41, 154, 113, 0.116), transparent 60%
+    ),
+  radial-gradient(
+    ellipse at 95% 95%,
+    rgba(3, 158, 101, 0.062), transparent 50%
+  ),
+  linear-gradient(
+    to top,
+    rgb(6, 11, 11));
+}
+.S2-act-tabs #S2-tab-2 { 
+  position: relative;
+  overflow: hidden;
+  background: 
+  radial-gradient( 
+    ellipse at 15% 15%,
+    rgba(139, 30, 211, 0.09), transparent 60%
+    ),
+  radial-gradient(
+    ellipse at 95% 95%,
+    rgba(106, 3, 158, 0.073), transparent 50%
+  ),
+  linear-gradient(
+    to top,
+    rgb(9, 3, 14));
+}
+.S2-act-tabs #S2-tab-3 { 
+  position: relative;
+  overflow: hidden;
+  background: 
+  radial-gradient( 
+    ellipse at 15% 15%,
+    rgba(242, 249, 32, 0.111), transparent 60%
+    ),
+  radial-gradient(
+    ellipse at 95% 95%,
+    rgba(230, 230, 6, 0.1), transparent 50%
+  ),
+  linear-gradient(
+    to top,
+    rgb(4, 15, 18));
+}
+
+.S2-intro::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 70%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(5, 7, 8, 0.416) 25%,
+    rgba(5, 7, 8, 0.697) 55%,
+    var(--s2-section-color) 100% 
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+#SeasonTwo-episodes:has(#S2-tab-1[aria-selected="true"]) {  background: radial-gradient(ellipse at 50% 10%, rgba(0, 255, 140, 0.085), transparent 70%),  linear-gradient(to top, rgb(6, 0, 10), rgb(5, 8, 9))}
+#SeasonTwo-episodes:has(#S2-tab-2[aria-selected="true"]) {  background: radial-gradient(ellipse at 50% 10%, rgba(102, 0, 255, 0.097), transparent 70%),  linear-gradient(to top, rgb(5, 0, 10), rgb(7, 5, 9))}
+#SeasonTwo-episodes:has(#S2-tab-3[aria-selected="true"]) {  background: radial-gradient(ellipse at 50% 10%, rgba(245, 223, 26, 0.148), transparent 70%),  linear-gradient(to top, rgb(7, 7, 4), rgb(4, 4, 2))}
+#SeasonTwo-episodes:has(#S2-tab-1[aria-selected="true"]) .S2-tabs-eyebrow p { color: rgb(66, 255, 173);}
+#SeasonTwo-episodes:has(#S2-tab-2[aria-selected="true"]) .S2-tabs-eyebrow p { color: rgb(126, 21, 246)}
+#SeasonTwo-episodes:has(#S2-tab-3[aria-selected="true"]) .S2-tabs-eyebrow p { color: rgb(255, 216, 44)}
+
+body:has(#S2-tab-1[aria-selected="true"]) { --s2-section-color: rgb(6, 13, 11);}
+body:has(#S2-tab-2[aria-selected="true"]) { --s2-section-color: rgb(11, 7, 17);}
+body:has(#S2-tab-3[aria-selected="true"]) { --s2-section-color: rgb(14, 14, 7);}
+body:has(#S2-tab-1[aria-selected="true"]) .S2-intro h1 { color: rgb(20, 188, 132)}
+body:has(#S2-tab-2[aria-selected="true"]) .S2-intro h1 { color: rgb(132, 21, 229) }
+body:has(#S2-tab-3[aria-selected="true"]) .S2-intro h1 { color: rgb(252, 235, 49) }
+body:has(#S2-tab-1[aria-selected="true"]) .S2-tabs-eyebrow::before  { color: rgba(20, 188, 115, 0.723);  filter: drop-shadow(0 0 0.25rem rgba(23, 255, 178, 0.568));}
+body:has(#S2-tab-2[aria-selected="true"]) .S2-tabs-eyebrow::before  { color: rgba(99, 25, 190, 0.797);  filter: drop-shadow(0 0 0.25rem rgba(135, 23, 255, 0.568)); }
+body:has(#S2-tab-3[aria-selected="true"]) .S2-tabs-eyebrow::before  { color: rgba(246, 240, 76, 0.827);  filter: drop-shadow(0 0 0.25rem rgba(250, 229, 36, 0.568)); }
+body:has(#S2-tab-1[aria-selected="true"]) .S2-tabs-eyebrow::after  { color: rgba(20, 188, 115, 0.723);  filter: drop-shadow(0 0 0.25rem rgba(23, 255, 151, 0.568)); }
+body:has(#S2-tab-2[aria-selected="true"]) .S2-tabs-eyebrow::after  { color: rgba(97, 25, 190, 0.797);  filter: drop-shadow(0 0 0.25rem rgba(136, 51, 255, 0.568)); }
+body:has(#S2-tab-3[aria-selected="true"]) .S2-tabs-eyebrow::after  { color: rgba(246, 240, 76, 0.827);  filter: drop-shadow(0 0 0.25rem rgba(255, 220, 23, 0.568)); }
+
+body:has(#S2-tab-1[aria-selected="true"]) .S2-plaque {  background: linear-gradient(180deg, rgba(12, 176, 99, 0.292), rgba(6, 70, 42, 0.385));}
+body:has(#S2-tab-2[aria-selected="true"]) .S2-plaque {  background: linear-gradient(180deg, rgba(80, 12, 176, 0.292), rgba(46, 6, 70, 0.385));}
+body:has(#S2-tab-3[aria-selected="true"]) .S2-plaque {  background: linear-gradient(180deg, rgba(190, 176, 26, 0.292), rgba(70, 65, 6, 0.385));}
+body:has(#S2-tab-1[aria-selected="true"]) .S2-scorecard > div{  background-color: rgba(0, 105, 53, 0.337);}
+body:has(#S2-tab-2[aria-selected="true"]) .S2-scorecard > div{  background-color: rgba(49, 0, 105, 0.337);}
+body:has(#S2-tab-3[aria-selected="true"]) .S2-scorecard > div{  background-color: rgba(100, 105, 0, 0.337);}
+
+.S2-act-tabs #S2-tab-1 h2 { color: rgb(96, 255, 175);}
+.S2-act-tabs #S2-tab-2 h2 { color: rgb(112, 45, 205);}
+.S2-act-tabs #S2-tab-3 h2 { color: rgb(235, 206, 60);}
+.S2-act-tabs #S2-tab-1::before { background-color: rgb(105, 255, 175);}
+.S2-act-tabs #S2-tab-2::before { background-color: rgb(98, 7, 201);}
+.S2-act-tabs #S2-tab-3::before { background-color: rgb(239, 226, 39);}
+.S2-act-tabs #S2-tab-1 h2::before { background-color: rgb(120, 228, 176)}
+.S2-act-tabs #S2-tab-2 h2::before { background-color: rgb(100, 11, 190)}
+.S2-act-tabs #S2-tab-3 h2::before { background-color: rgb(239, 217, 48)}
+
+#S2-tab-1::after { content: "I"; color: rgb(22, 255, 154);}
+#S2-tab-2::after { content: "II"; color: rgb(141, 54, 255);}
+#S2-tab-3::after { content: "III"; color: rgb(255, 223, 15)}
+
+#S2-act1-header { color: rgb(96, 255, 183);  background-color:rgba(23, 193, 193, 0.026);}
+#S2-act2-header { color: rgb(117, 45, 205); background-color:rgba(188, 66, 241, 0.026)}
+#S2-act3-header { color: rgb(222, 196, 26); background-color:rgba(241, 218, 66, 0.026)}
+
+#S2-panel-1 img { border: 1px solid rgba(48, 147, 104, 0.668)}
+#S2-panel-2 img { border: 1px solid rgba(161, 56, 241, 0.668)}
+#S2-panel-3 img { border: 1px solid rgba(236, 223, 43, 0.668)}
+
+#S2-panel-1 { border: 1px solid rgba(10, 113, 68, 0.764);}
+#S2-panel-1 .episode {border: 1px solid rgba(16, 66, 50, 0.342);}
+#S2-panel-2 { border: 1px solid rgba(85, 12, 131, 0.764);}
+#S2-panel-2 .episode {border: 1px solid rgba(43, 16, 66, 0.342);}
+#S2-panel-3 { border: 1px solid rgba(113, 98, 10, 0.764);}
+#S2-panel-3 .episode {border: 1px solid rgba(65, 66, 16, 0.342);}
+
+.S2-act-1E { color: rgb(53, 243, 148);}
+.S2-act-2E { color: rgb(121, 35, 242);}
+.S2-act-3E { color: rgb(241, 255, 44);}
+
+.S2-act-header span {color: hsl(346, 100%, 55%) !important;  text-shadow: 0 0 0.3rem rgba(255, 51, 82, 0.566)}
+
+
+/* ============================================= */
+/* LEGACY — append to Arcane.css                  */
+/* ============================================= */
+
+#Legacy {
+  scroll-margin-top: 3rem;
+  padding: 10rem 0 9rem;
+  background:
+    radial-gradient(ellipse 50% 40% at 50% 0%, rgba(201, 162, 39, 0.06), transparent 65%),
+    linear-gradient(to bottom, #07090b 0%, #0a0d10 100%);
+}
+
+.legacy-wrap {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.legacy-eyebrow {
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.legacy-title {
+  font-family: Cinzel, serif;
+  font-weight: 600;
+  font-size: 3.2rem;
+  letter-spacing: 0.04em;
+  color: var(--parchment);
+  margin-bottom: 3rem;
+}
+
+.legacy-intro {
+  font-family: body;
+  color: var(--text-gold);
+  font-size: 1.1rem;
+  line-height: 2rem;
+  word-spacing: 0.04rem;
+}
+
+.legacy-intro p {
+  margin-bottom: 1.4rem;
+}
+
+.legacy-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.legacy-frame {
+  margin: 4rem auto 0;
+  max-width: 38rem;
+}
+
+.legacy-frame img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 1px solid var(--brass-dim);
+  filter: saturate(0.85) brightness(0.88);
+  display: block;
+}
+
+.legacy-frame figcaption {
+  font-family: "IBM Plex Mono";
+  font-size: 0.7rem;
+  letter-spacing: 0.08rem;
+  color: var(--parchment-dim);
+  margin-top: 0.85rem;
+}
+
+.legacy-rule {
+  border: none;
+  height: 1px;
+  width: 100%;
+  max-width: 30rem;
+  margin: 4rem auto;
+  background: linear-gradient(to right, transparent, var(--rule) 50%, transparent);
+}
+
+.legacy-accordion {
+  text-align: left;
+}
+
+.legacy-item {
+  border-top: 1px solid var(--rule);
+}
+
+.legacy-item:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.legacy-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0.25rem;
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  font-size: 0.95rem;
+  color: var(--parchment);
+  transition: color 0.3s;
+}
+
+.legacy-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.legacy-item summary::after {
+  content: "+";
+  font-family: "IBM Plex Mono";
+  font-size: 1.1rem;
+  color: var(--brass);
+  transition: transform 0.3s;
+}
+
+.legacy-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.legacy-item summary:hover {
+  color: var(--brass-bright);
+}
+
+.legacy-panel {
+  padding: 0 0.25rem 1.6rem;
+  font-family: body;
+  color: var(--text-gold);
+  font-size: 1rem;
+  line-height: 1.85rem;
+}
+
+.legacy-closing {
+  font-family: "Spectral-Italic";
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: var(--brass-bright);
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 44rem) {
+  .legacy-title { font-size: 2.2rem; }
+  .legacy-wrap { padding: 0 1.5rem; }
+  .legacy-frame img { aspect-ratio: 4 / 5; object-position: center; }
+}

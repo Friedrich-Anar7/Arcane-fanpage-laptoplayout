@@ -1,0 +1,2667 @@
+@font-face {
+  font-family: 'Spectral-Italic';
+  src: url('Spectral-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('Cinzel-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url('IBMPlexMono.ttf')
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("NotoSerif.ttf")
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  color-scheme: dark;
+  --gold-soft: rgba(201, 162, 39, 0.35);
+  --gold: #c9a227;
+  --panel: #0f161c;
+  --panel-2: #0c1117;
+  --parchment: #ece4cf;
+  --muted: #8a9499;
+  --green: #49ffa2;
+  --violet: #8a4fff;
+  --violet-soft: rgba(138, 79, 255, 0.30);
+  --green-soft: rgba(73, 255, 162, 0.30);
+}
+
+.page-seam {
+  height: 0.12rem;
+  background: linear-gradient(90deg, transparent, rgba(182, 39, 201, 0.8), rgba(51, 178, 44, 0.8), transparent);
+  box-shadow: 0 0 0.62rem rgba(174, 39, 201, 0.5), 0 0 0.62rem rgba(79, 255, 103, 0.5);
+}
+
+body {
+  margin: 0rem;
+  overflow-x: hidden;
+}
+
+.page1 {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(ellipse at -7% -4%, rgba(60, 52, 10, 0.42) 0%, rgba(160, 130, 18, 0.16) 3%, rgba(65, 58, 12, 0.28) 7%, transparent 25%),
+    radial-gradient(ellipse at 140% 80%, rgba(18, 65, 15, 0.288) 10%, transparent 55%),
+    radial-gradient(ellipse at 15% 150%, rgba(80, 0, 130, 0.37) 20%, transparent 55%),
+    linear-gradient(to bottom, #07090a, #0a0e10);
+}
+
+.center-texts {
+  font-family: 'Cinzel', serif;
+  position: relative;
+  top: 11.25rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+#arcane {
+  line-height: 1;
+  font-size: clamp(3.25rem, 2rem + 6vw, 8.12rem);
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.50rem;
+  margin: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(105, 0, 185) 25%,
+    rgb(58, 18, 85) 50%,
+    rgba(3, 148, 3, 0.80) 60%,
+    rgb(10, 130, 10) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+#story {
+  font-size: clamp(2.75rem, 1.75rem + 5vw, 6.88rem);
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  letter-spacing: 0.31rem;
+  margin-top: -1.875rem;
+  padding: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(105, 0, 185) 25%,
+    rgb(58, 18, 85) 50%,
+    rgba(3, 148, 3, 0.80) 60%,
+    rgb(10, 130, 10) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+#Arcane {
+  font-family: 'Cinzel', serif;
+  font-size: 1.88rem;
+  font-weight: 550;
+  letter-spacing: 0.31rem;
+  text-transform: uppercase;
+  margin-top: 0.94rem;
+  margin-left: 1.56rem;
+  background: linear-gradient(
+    90deg,
+    rgba(217, 174, 4, 0.83) 40%,
+    rgba(120, 120, 15, 0.55) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.top-row {
+  height: 3.12rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  backdrop-filter: blur(0.19rem);
+  z-index: 100;
+}
+
+.top-right {
+  margin-top: 0.94rem;
+  font-family: 'Cinzel', serif;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  font-size: 1.56rem;
+  font-weight: 450;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+  margin-right: 1.88rem;
+  color: rgba(255, 255, 255, 0.69);
+}
+
+.top-center {
+  font-family: 'IBM Plex Mono', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7em;
+  font-weight: 250;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1;
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.top-arcane {
+  text-transform: uppercase;
+  font-family: 'IBM Plex Mono', serif;
+  font-weight: 300;
+  font-size: 0.94rem;
+  letter-spacing: 0.12rem;
+  color: rgba(209, 165, 8, 0.925);
+}
+
+#Z {
+  color: rgb(11, 231, 11);
+}
+
+#P {
+  color: rgba(201, 201, 1, 0.886);
+}
+
+#Arc, #Sto {
+  text-shadow: 0 0 3.75rem rgba(60, 6, 110, 0.63);
+}
+
+#ry, #ane {
+  text-shadow: 0 0 3.75rem rgba(4, 75, 6, 0.50);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.69);
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: white
+}
+
+.page2 {
+  padding-top: 6.25rem;
+  margin: 0rem;
+  min-height: 200vh;
+  background-image:
+    radial-gradient(ellipse at 0% 20%, rgba(255, 222, 32, 0.096) 8%, transparent 35%),
+    radial-gradient(ellipse at 90% 76%,rgba(0, 90, 208, 0.159) 8%, transparent 30%),
+    radial-gradient(ellipse 100% 150% at 100% 19%, rgba(22, 58, 22, 0.271) 4%, transparent 30%),
+    radial-gradient(ellipse 40% 70%at 0% 90%, rgba(29, 85, 29, 0.159) 5%, transparent 60%),
+    linear-gradient(to bottom, #000000, #000000);
+}
+
+.o {
+  font-size: 3.12rem;
+}
+.overview {
+  margin-left: 3.75rem;
+  margin-bottom: 0.94rem;
+  display: block;
+  flex-direction: column;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.50rem, 1rem + 2vw, 2.50rem);
+  font-weight: 550;
+  letter-spacing: 0.19rem;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    rgba(217, 174, 4, 0.83) 40%,
+    rgba(120, 120, 15, 0.55) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+#Overview {
+  box-sizing:border-box;
+  height: 43.75rem;
+  width: 100%;
+  margin: 0;
+  gap: 3.12rem;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  top: 12.50rem;
+  padding-left: 9.38rem;
+}
+#img1 {
+  position: relative;
+  width: clamp(13rem, 8rem + 20vw, 21.88rem);
+  aspect-ratio: 7 / 10;
+  height: auto;
+}
+.img1 {
+  position: relative;
+  width: clamp(13rem, 8rem + 20vw, 21.88rem);
+  aspect-ratio: 7 / 10;
+  height: auto;
+  border: 1px solid var(--gold-soft);      
+  padding: 0.38rem;
+  background: linear-gradient(160deg, rgba(201, 163, 39, 0.373), rgba(138,79,255,0.05)), var(--panel);
+}
+
+.img1::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;                              
+  border: 1px solid rgba(177, 141, 22, 0.685);
+  pointer-events: none;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 23.12rem;
+}
+
+.right {
+  margin-top: 3.75rem;
+  flex: 1;
+  max-width: 43.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Synopsis {
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  font-width: 500;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  color: darkgreen;
+  padding: 0;
+  margin-bottom: 0.62rem;
+}
+
+.p {
+  font-family: "NotoSerif", serif;
+  font-weight: 350;
+  font-size: 1rem;
+  color:rgb(246, 231, 205);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 3.12rem;
+}
+
+#vid1 {
+  width: clamp(18rem, 10rem + 45vw, 56.25rem);
+  aspect-ratio: 2 / 1;
+  height: auto;
+  object-fit: cover;
+}
+
+.vid1 {
+  position: relative;
+  top: 8.12rem;
+}
+
+.vid1 {
+  position: relative;
+  width: clamp(18rem, 10rem + 45vw, 56.25rem);
+  aspect-ratio: 2 / 1;
+  height: auto;
+  border: 1px solid var(--gold-soft);      
+  border-radius: 5px;
+  padding: 0.38rem;
+  background: linear-gradient(to left, rgba(1, 23, 63, 0.873) 50%, rgba(9, 14, 21, 0.623)), var(--panel);
+}
+
+.vid1::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;                              
+  border: 1px solid rgba(166, 159, 59, 0.225);
+  pointer-events: none;
+}
+
+.series-info {
+  font-family: "IBM Plex Mono", serif;
+  font-size: 0.81rem;
+  font-weight: 330;
+  padding: 1.25rem;
+  position: relative;
+  top: 8.12rem;
+  margin-left: 9.38rem;    
+  height: 16.88rem;
+  width: clamp(14rem, 8rem + 20vw, 21.88rem);
+  background-color: rgba(9, 27, 39, 0.505);
+  margin-bottom: 0.31rem;
+  padding-bottom: 1.88rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 4%;
+}
+
+.label {
+  min-width: 8.75rem;  
+  color: var(--muted);
+}
+
+.break {
+  height: 0.44rem;
+}
+
+#Zaun {
+  width: 100%;
+  min-height: 325vh;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(47, 233, 152, 0.097) 10%, transparent 30%),
+    radial-gradient(ellipse 140% 80% at 50% 63%, rgba(57, 168, 129, 0.095) 3%, transparent 13%),
+    radial-gradient(ellipse 140% 80% at 15% 54%, rgba(168, 129, 57, 0.166) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 47% 46%, rgba(150, 57, 168, 0.127) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 84% 53%, rgba(15, 234, 73, 0.062) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 15% 69%, rgba(62, 62, 62, 0.388) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 47% 77%, rgba(255, 17, 17, 0.119) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 84% 69%, rgba(3, 175, 243, 0.116) 3%, transparent 15%),
+    radial-gradient(ellipse 230% 130% at 85% 112%, rgba(96, 24, 116, 0.232) 8%, transparent 24%),
+    radial-gradient(ellipse 230% 130% at 15% 112%, rgba(147, 23, 182, 0.26) 8%, transparent 24%),
+    linear-gradient(200deg, #090f0c 0%, #000000 100%);
+  }
+
+.Zaun-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.zaun-left-flex {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6.25rem;
+  padding-left: 4.38rem;
+  width: 30%;
+  height: 100%;
+}
+
+#zaun-img {
+  width: clamp(15rem, 8rem + 25vw, 25.62rem);
+  aspect-ratio: 41 / 55;
+  height: auto;
+}
+
+.zaun-img {
+  position: relative;
+  width: clamp(15rem, 8rem + 25vw, 25.62rem);
+  aspect-ratio: 41 / 55;
+  height: auto;
+  border: 2px solid rgba(200, 187, 45, 0.823);      
+  border-radius: 0px;
+  padding: 0.62rem;
+  background: linear-gradient(160deg, rgba(33, 226, 152, 0.373), rgba(19, 48, 37, 0.681)), var(--panel);
+}
+.zaun-img::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;                              
+  border: 2px solid rgba(200, 187, 45, 0.823);
+  pointer-events: none;
+}
+
+.undercity-text {
+  font-size: 1.25rem;
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+}
+.zaun-text {
+  font-size: clamp(2.25rem, 1.25rem + 4vw, 5rem);
+  font-family: "IBM Plex Mono";
+  font-weight: 900;
+  text-transform: uppercase;
+  color:#49ffa2
+}
+
+.the {
+  color: #B8B5AF
+}
+
+.below {
+  color:#49ffa2
+}
+
+.zaun-middle-flex {
+  display: flex;
+  flex-direction: column;
+  padding-top:13.75rem;
+  padding-left: 3.75rem;
+  height: 100%;
+}
+
+.small-zaun {
+  padding-left: 0.44rem;
+  color:#3ed386d6;
+  font-size: 1.62rem;
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.zaun-p {
+  width: 85%;
+  margin: 0.50rem;
+  font-family: "NotoSerif", serif;
+  line-height: 1.7;
+  font-size: 1.06rem;
+  font-weight: 350;
+  color:#B8B5AF
+}
+
+.zaun-figures {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 35.62rem;
+  left: 40%;
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 1rem + 3vw, 5rem);
+  width: 6.25rem;
+  color: rgba(1, 255, 111, 0.692);
+  text-shadow: 0rem 0rem 0.94rem rgba(0, 255, 110, 0.451);
+}
+
+.zaun-images {
+  height: 16.25rem;
+  width: 13.12rem;
+}
+
+#zaun-images {
+  margin-top: 9.38rem
+}
+
+.zaun-top-images {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 6.25rem;
+}
+
+#zaun-vander {
+  border-radius: 5px;
+  margin-left: 3.12rem;
+  position: relative;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(226, 129, 33, 0.467)), var(--panel);
+}
+
+.vander-text {
+  margin-right: 2.50rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  padding-left: 0.62rem;
+  border: 3px solid rgba(235, 144, 53, 0.771);
+  border-right: none;
+  border-top: none;
+  margin-left: 0.25rem;
+  background: radial-gradient(circle at bottom left, rgba(168, 129, 57, 0.222) 20%, transparent 80%)
+}
+.vander {
+  color:#aa7b2f;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "NotoSerif";
+}
+.vander-ander {
+  font-size: 1.06rem;
+}
+.vander-v {
+  font-size: 1.44rem;
+}
+.vander-leader {
+  font-family: "IBM Plex Mono";
+  color:#aa7b2f;
+  text-transform: uppercase;
+  margin-bottom: 3.12rem;
+  font-weight: 600;
+}
+.vander-z {
+  font-size: 0.88rem;
+}
+.vander-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color: rgba(253, 179, 60, 0.807)
+}
+.vander-quote {
+  font-family: "NotoSerif";
+  color: rgba(253, 179, 60, 0.807)
+}
+
+#zaun-silco {
+  border-radius: 5px;
+  position: relative;
+  bottom: 11.25rem;
+  left: 1.25rem;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(200, 0, 255, 0.511)), var(--panel);
+}
+.silco-text {
+  border-radius: 3px;
+  padding-left: 0.62rem;
+  left: 1.50rem;
+  position: relative;
+  bottom: 11.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "NotoSerif";
+  font-size: 0.62rem;
+  font-weight: 400;
+  border: 3px solid rgba(195, 0, 255, 0.807);
+  border-right: none;
+  border-top: none;
+  background: radial-gradient(circle at bottom left, rgba(204, 1, 255, 0.16)  20%, transparent 80%)
+}
+.silco {
+  color:rgba(255, 0, 0, 0.527);
+  font-family: "NotoSerif ";
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  text-shadow: 0rem 0.31rem 0.62rem black;
+}
+.silco-ilco {
+  font-size: 1.06rem;
+  letter-spacing: 0.06rem;
+}
+.silco-s {
+  font-size: 1.44rem;
+}
+.silco-ilco {
+  color: #ea00ffbb
+}
+.silco-position {
+  color: rgba(183, 0, 255, 0.767);
+  font-size: 0.62rem;
+  font-family: "NotoSerif";
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.silco-r {
+  font-size: 0.88rem;
+}
+.silco-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color: rgba(183, 0, 255, 0.767)
+}
+.silco-quote {
+  font-size: 0.56rem;
+  font-family: "NotoSerif";
+  color: rgba(183, 0, 255, 0.767)
+}
+
+#zaun-singed {
+  border-radius: 5px;
+  position: relative;
+  left: 5rem;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(9, 116, 45, 0.642)), var(--panel);
+}
+.singed-text {
+  border-radius: 3px;
+  margin-left: 5.25rem;
+  padding-left: 0.62rem;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  border: 3px solid rgba(17, 162, 65, 0.359);
+  border-right: none;
+  border-top: none;
+  background: radial-gradient(circle at bottom left, rgba(48, 158, 103, 0.186)  20%, transparent 80%)
+}
+.singed {
+  color:rgba(0, 255, 26, 0.379);
+  font-family: "NotoSerif ";
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+}
+.singed-inged {
+  font-size: 1.06rem;
+  letter-spacing: 0.06rem;
+}
+.singed-s {
+  font-size: 1.44rem;
+}
+.singed-inged {
+  color: rgba(0, 255, 26, 0.379)
+}
+.singed-position {
+  font-family: "IBM Plex Mono";
+  color:rgba(0, 255, 26, 0.379);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.singed-z {
+  font-size: 0.88rem;
+}
+.singed-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color: rgba(0, 255, 26, 0.379)
+}
+.singed-quote {
+  font-family: "NotoSerif";
+  color: rgba(0, 255, 26, 0.379)
+}
+
+
+.zaun-bottom-images {
+  display: flex;
+  flex-direction: row;
+}
+
+#zaun-ekko {
+  border-radius: 5px;
+  margin-left: 3.12rem;
+  position: relative;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(94, 94, 94, 0.566)), var(--panel);
+}
+
+.ekko-text {
+  margin-right: 2.50rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  padding-left: 0.62rem;
+  border: 3px solid rgba(79, 79, 79, 0.493);
+  border-right: none;
+  border-top: none;
+  margin-left: 0.25rem;
+  background: radial-gradient(circle at bottom left, rgba(76, 76, 76, 0.344) 20%, transparent 80%)
+}
+.ekko {
+  color:#5b5b5b;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "NotoSerif";
+}
+.ekko-kko {
+  font-size: 0.94rem;
+}
+.ekko-e {
+  font-size: 1.44rem;
+}
+.ekko-position {
+  font-family: "IBM Plex Mono";
+  color:#5b5b5b;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.ekko-l {
+  font-size: 0.88rem;
+}
+.ekko-p {
+  margin-top: 1.25rem;
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color:#5b5b5b;
+}
+.ekko-quote {
+  font-family: "NotoSerif";
+  color:#5b5b5b;
+}
+
+#zaun-vi {
+  position: relative;
+  left: 1.50rem;
+  top: 11.25rem;
+  border-radius: 5px;
+  position: relative;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, #a6031689), var(--panel);
+}
+
+.vi-text {
+  color: #ff000089;
+  position: relative;
+  left: 1.50rem;
+  top: 11.25rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  padding-left: 0.62rem;
+  border: 3px solid rgba(255, 7, 7, 0.549);
+  border-right: none;
+  border-top: none;
+  margin-left: 0.25rem;
+  background: radial-gradient(circle at bottom left, rgba(128, 19, 19, 0.156) 20%, transparent 80%)
+}
+.vi {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "NotoSerif";
+}
+.vi-iolet {
+  font-size: 1.12rem;
+}
+.vi-v {
+  font-size: 1.44rem;
+}
+.vi-position {
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  margin-bottom: 2.25rem;
+  font-weight: 600;
+}
+.vi-z {
+  font-size: 0.88rem;
+}
+.vi-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+}
+.vi-quote {
+  font-family: "NotoSerif";
+}
+
+#zaun-jinx {
+  border-radius: 5px;
+  margin-left: 5rem;
+  position: relative;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(2, 68, 106, 0.607)), var(--panel);
+}
+
+.jinx-text {
+  color: rgba(0, 123, 255, 0.779);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  padding-left: 0.62rem;
+  border: 3px solid rgba(1, 166, 255, 0.293);
+  border-right: none;
+  border-top: none;
+  margin-left: 0.25rem;
+  background: radial-gradient(circle at bottom left, rgba(22, 131, 178, 0.208) 20%, transparent 80%)
+}
+.jinx {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "NotoSerif";
+}
+.jinx-inx {
+  font-size: 0.94rem;
+}
+.jinx-j {
+  font-size: 1.44rem;
+}
+.jinx-position {
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  margin-bottom: 3.12rem;
+  font-weight: 600;
+}
+.jinx-z {
+  font-size: 0.88rem;
+}
+.jinx-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+}
+.jinx-quote {
+  font-family: "NotoSerif";
+}
+
+.zaun-bottom {
+  padding-top: 1.88rem;
+  height: 28.12rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.zaun-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.zaun-card {
+  position: relative;
+  overflow: hidden;
+
+  width: 15rem;
+  height: 9.38rem;
+
+  border: 2px solid var(--muted);
+  border-radius: 8px;
+
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(0.25rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#shimmer:hover {
+  height: 10.62rem;
+  width: 16.88rem;
+  transform: translateY(-0.5rem);
+  border-color:  rgb(149, 0, 255);
+  box-shadow: 0 0 1.25rem rgb(85, 4, 191);
+}
+.shimmer {
+  font-family: "Cinzel";
+  font-weight: 600;
+  color: rgba(112, 0, 249, 0.853);
+  -webkit-text-stroke: 0.03rem rgb(170, 0, 255);
+}
+
+#firelight:hover {
+  height: 10.62rem;
+  width: 16.88rem;
+  transform: translateY(-0.5rem);
+  border-color:  rgba(9, 197, 47, 0.759);
+  box-shadow: 0 0 1.25rem rgba(5, 139, 5, 0.679);
+}
+.firelights {
+  font-family: "Cinzel";
+  font-weight: 600;
+  color: rgba(4, 255, 37, 0.692);
+  -webkit-text-stroke: 0.03rem rgb(4, 255, 0);
+}
+
+#the-last-drop:hover {
+  height: 10.62rem;
+  width: 16.88rem;
+  transform: translateY(-0.5rem);
+  border-color:  rgba(8, 224, 145, 0.929);
+  box-shadow: 0 0 1.25rem rgba(4, 255, 163, 0.571);
+}
+.last-drop {
+  font-family: "Cinzel";
+  font-weight: 600;
+  color: rgb(4, 254, 146);
+  -webkit-text-stroke: 0.03rem rgb(0, 255, 30);
+}
+
+#the-rebellion:hover {
+  height: 10.62rem;
+  width: 16.88rem;
+  transform: translateY(-0.5rem);
+  border-color:  rgba(237, 31, 13, 0.858);
+  box-shadow: 0 0 1.25rem rgba(255, 44, 2, 0.686);
+}
+.rebellion {
+  font-family: "Cinzel";
+  font-weight: 600;
+  color: rgb(196, 66, 31);
+  -webkit-text-stroke: 0.03rem rgba(226, 12, 12, 0.904);
+}
+
+.zaun-card p{
+  font-size: 1.50rem;
+  text-shadow: 0 0.12rem 0.62rem rgba(0,0,0,.8);
+  position: absolute
+}
+
+.arcane-zaun {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Cinzel";
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.62rem 0.62rem;
+  text-shadow: 0 0.25rem 0.62rem rgba(0, 255, 110, 0.314);
+  color: rgba(3, 255, 171, 0.67)
+}
+.shimmer-sidebar, .Shimmer-card-sidebar{
+  border-left: 2px solid rgba(183, 8, 206, 0.819);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(128, 0, 128, 0.158) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(128, 0, 128, 0.158) 5%, transparent 35%),
+  linear-gradient(to bottom,#100811);
+  color: #e342ff
+}
+.shimmer-sidebar p{
+  color: rgb(211, 15, 211);
+}
+.firelight-sidebar{
+  border-left: 2px solid rgba(8, 206, 15, 0.819);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(21, 177, 32, 0.158) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(27, 185, 40, 0.158) 5%, transparent 35%),
+  linear-gradient(to bottom,#081108);
+  color: #37ff37e6
+}
+.firelight-sidebar p{
+  color: rgba(43, 254, 43, 0.704)
+}
+.last-drop-sidebar {
+  border-left: 2px solid rgb(0, 255, 187);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(0, 128, 68, 0.297) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(0, 128, 68, 0.297) 5%, transparent 35%),
+  linear-gradient(to bottom,#001c14);
+  color: var(--green);
+}
+.last-drop-sidebar p {
+  color: rgba(28, 240, 124, 0.677)
+}
+.rebellion-sidebar {
+  border-left: 2px solid rgba(230, 24, 9, 0.933);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(128, 11, 0, 0.366) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(128, 11, 0, 0.366) 5%, transparent 35%),
+  linear-gradient(to bottom,#180300);
+  color: rgb(251, 47, 20)
+}
+.rebellion-sidebar p {
+  color: rgba(250, 46, 19, 0.848)
+}
+
+.shimmer-sidebar.active,
+.firelight-sidebar.active,
+.rebellion-sidebar.active,
+.last-drop-sidebar.active {
+  transform: translateX(0);
+}
+
+.zaun-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(0.12rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.zaun-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.sidebar-header {
+  font-family: "Cinzel", serif;
+  font-size: 1.50rem;
+  font-weight: 700;
+}
+.sidebar-h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.12rem;  
+}
+.sidebar-p {
+  font-family: "NotoSerif" ,serif;
+  font-size: 0.81rem;
+  font-weight: 350;
+}
+
+
+#Piltover {
+  width: 100%;
+  min-height: 325vh;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(242, 210, 31, 0.147)10%, transparent 30%),
+    radial-gradient(ellipse at top right, rgba(206, 175, 1, 0.073)5%, transparent 50%),
+    radial-gradient(ellipse 140% 80% at 50% 63%, rgba(226, 207, 32, 0.068) 3%, transparent 13%),
+    radial-gradient(ellipse 140% 80% at 15% 54%, rgba(255, 193, 77, 0.1) 3%, transparent 13%),
+    radial-gradient(ellipse 140% 80% at 47% 46%, rgba(255, 195, 44, 0.092) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 82% 53%, rgba(15, 110, 234, 0.125) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 15% 69%, rgba(255, 0, 0, 0.115) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 47% 77%, rgba(15, 110, 234, 0.125) 3%, transparent 15%),
+    radial-gradient(ellipse 140% 80% at 82% 69%, rgba(255, 193, 77, 0.133) 3%, transparent 15%),
+    radial-gradient(ellipse 230% 130% at 85% 112%, rgba(24, 33, 116, 0.232) 8%, transparent 24%),
+    radial-gradient(ellipse 230% 130% at 15% 112%, rgba(2, 1, 71, 0.433) 8%, transparent 30%),
+    linear-gradient(200deg, #000000f9);
+  }
+
+#piltover-img {
+  width: clamp(15rem, 8rem + 25vw, 25.62rem);
+  aspect-ratio: 41 / 55;
+  height: auto;
+}
+
+.piltover-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.piltover-left-flex {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6.25rem;
+  padding-left: 4.38rem;
+  width: 30%;
+  height: 100%;
+}
+
+.piltover-img {
+  position: relative;
+  width: clamp(15rem, 8rem + 25vw, 25.62rem);
+  aspect-ratio: 41 / 55;
+  height: auto;
+  border: 2px solid rgba(202, 188, 33, 0.823);      
+  border-radius: 0px;
+  padding: 0.62rem;
+  background: linear-gradient(160deg, rgba(104, 102, 12, 0.533), rgba(43, 44, 20, 0.681)), var(--panel);
+}
+.piltover-img::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;                              
+  border: 2px solid rgba(207, 193, 36, 0.889);
+  pointer-events: none;
+}
+.Topside {
+  font-size: 1.44rem;
+  text-transform: uppercase;
+  font-family: "Cinzel";
+  font-weight: 500;
+  color:#ddce00ea;
+}
+.piltover-the {
+  color:#bdbc9c;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.piltover-dot {
+  padding: 0.88rem;
+  color:#bdbc9c;
+  font-size: 1.25rem;
+}
+
+.piltover-text {
+  font-size: clamp(2rem, 1.10rem + 3.5vw, 4.38rem);
+  font-family: "Cinzel";
+  font-weight: 800;
+  text-transform: uppercase;
+  color:#ddce00df
+}
+
+.piltover-middle-flex {
+  display: flex;
+  flex-direction: column;
+  padding-top:13.75rem;
+  padding-left: 3.75rem;
+  height: 100%;
+}
+
+.small-piltover {
+  padding-left: 0.44rem;
+  color:#fcce00d6;
+  font-size: 1.62rem;
+  font-family: "Cinzel";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.piltover-p {
+  width: 85%;
+  margin: 0.50rem;
+  font-family: "NotoSerif", serif;
+  font-weight: 310;
+  line-height: 1.7;
+  font-size: 1.06rem;
+  font-weight: 450;
+  color:#bdbc9c
+}
+
+
+.piltover-figures {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 35.62rem;
+  left: 40%;
+  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 1rem + 3vw, 5rem);
+  width: 6.25rem;
+  color: rgba(227, 221, 43, 0.712);
+  text-shadow: 0rem 0rem 0.94rem rgba(163, 179, 43, 0.451);
+}
+
+.piltover-images {
+  height: 16.25rem;
+  width: 13.12rem;
+}
+
+#piltover-images {
+  margin-top: 9.38rem
+}
+
+.piltover-top-images {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 6.25rem;
+}
+
+#piltover-Heimerdinger {
+  border-radius: 5px;
+  margin-left: 3.12rem;
+  position: relative;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(226, 129, 33, 0.467)), var(--panel);
+}
+#piltover-Mel {
+  border-radius: 5px;
+  margin-left: 8.12rem;
+  position: relative;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(226, 129, 33, 0.467)), var(--panel);
+}
+
+.Heimerdinger-text, .Mel-text {
+  margin-right: 2.50rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  padding-left: 0.62rem;
+  border: 3px solid rgba(235, 144, 53, 0.771);
+  border-right: none;
+  border-top: none;
+  margin-left: 0.25rem;
+  background: radial-gradient(circle at bottom left, rgba(168, 129, 57, 0.222) 20%, transparent 80%)
+}
+.Heimerdinger, .Mel {
+  color:#aa7b2f;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "NotoSerif";
+}
+.Heimerdinger-eimerdinger, .Mel-el {
+  font-size: 1rem;
+}
+.Heimerdinger-h, .Mel-m {
+  font-size: 1.38rem;
+}
+.Heimerdinger-founder, .Mel-position {
+  font-family: "IBM Plex Mono";
+  color:#aa7b2f;
+  text-transform: uppercase;
+  margin-bottom: 2.50rem;
+  font-weight: 600;
+}
+.Heimerdinger-pi, .Mel-P {
+  font-size: 0.88rem;
+}
+.Heimerdinger-p, .Mel-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color: rgba(253, 179, 60, 0.807)
+}
+.Heimerdinger-quote, .Mel-quote {
+  font-family: "NotoSerif";
+  color: rgba(253, 179, 60, 0.807)
+}
+
+#piltover-viktor {
+  border-radius: 5px;
+  position: relative;
+  bottom: 11.25rem;
+  left: 1.25rem;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, #b89a38b8), var(--panel);
+}
+.viktor-text {
+  border-radius: 3px;
+  padding-left: 0.62rem;
+  left: 1.50rem;
+  position: relative;
+  bottom: 11.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "NotoSerif";
+  font-size: 0.62rem;
+  font-weight: 400;
+  border: 3px solid #d7b136;
+  border-right: none;
+  border-top: none;
+  background: radial-gradient(circle at bottom left, #ffc91622  20%, transparent 80%)
+}
+.viktor {
+  color:#ffc400cf;
+  font-family: "NotoSerif ";
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+}
+.viktor-iktor {
+  font-size: 1.06rem;
+  letter-spacing: 0.06rem;
+}
+.viktor-v {
+  font-size: 1.44rem;
+}
+
+.viktor-position {
+  color: #ffc400cf;
+  font-size: 0.62rem;
+  font-family: "NotoSerif";
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.viktor-V {
+  font-size: 0.88rem;
+}
+.viktor-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color: #f2c73ccf
+}
+.viktor-quote {
+  font-size: 0.56rem;
+  font-family: "NotoSerif";
+  color: #eac343cf
+}
+
+#piltover-jayce,#piltover-caitlyn {
+  border-radius: 5px;
+  position: relative;
+  left: 5rem;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(3, 88, 133, 0.704)), var(--panel);
+}
+#piltover-caitlyn {
+  position: relative;
+  top: 11.25rem;
+  left: 1.50rem;
+}
+
+.caitlyn-text {
+  position: relative;
+  left: 1.50rem;
+  top: 11.25rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  padding-left: 0.62rem;
+  border: 3px solid rgba(0, 166, 255, 0.611);
+  border-right: none;
+  border-top: none;
+  margin-left: 0.25rem;
+  background: radial-gradient(circle at bottom left, rgba(48, 123, 158, 0.121) 20%, transparent 80%)
+}
+.jayce-text{
+  border-radius: 3px;
+  margin-left: 5.25rem;
+  padding-left: 0.62rem;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  border: 3px solid rgba(0, 166, 255, 0.611);
+  border-right: none;
+  border-top: none;
+  background: radial-gradient(circle at bottom left, rgba(48, 123, 158, 0.134)  20%, transparent 80%)
+}
+.jayce, .caitlyn {
+  color:rgba(0, 166, 255, 0.826);
+  font-family: "NotoSerif ";
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.jayce-ayce, .caitlyn-aitlyn {
+  font-size: 1.06rem;
+  letter-spacing: 0.06rem;
+}
+.jayce-j, .caitlyn-c{
+  font-size: 1.44rem;
+}
+.jayce-position, .caitlyn-position {
+  font-family: "IBM Plex Mono";
+  color:rgba(0, 166, 255, 0.778);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.jayce-H, .caitlyn-P {
+  font-size: 0.88rem;
+}
+.jayce-p, .caitlyn-p {
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color: rgba(0, 166, 255, 0.732)
+}
+.jayce-quote, .caitlyn-quote {
+  font-family: "NotoSerif";
+  color: rgba(0, 166, 255, 0.732)
+}
+
+
+.piltover-bottom-images {
+  display: flex;
+  flex-direction: row;
+}
+
+#piltover-Ambessa {
+  border-radius: 5px;
+  margin-left: 3.12rem;
+  position: relative;
+  height: 16.25rem;
+  width: 13.12rem;
+  padding: 0.28rem;
+  background: linear-gradient(160deg, rgba(147, 2, 2, 0.838)), var(--panel);
+}
+
+.Ambessa-text {
+  margin-right: 2.50rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 13.12rem;
+  height: 16.69rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.62rem;
+  font-weight: 400;
+  padding-left: 0.62rem;
+  border: 3px solid #ff0000;
+  border-right: none;
+  border-top: none;
+  margin-left: 0.25rem;
+  background: radial-gradient(circle at bottom left, rgba(151, 39, 24, 0.421) 20%, transparent 80%)
+}
+.Ambessa {
+  color:#ff0000bb;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "NotoSerif";
+}
+.Ambessa-mbessa {
+  font-size: 0.94rem;
+}
+.Ambessa-a {
+  font-size: 1.44rem;
+}
+.Ambessa-position {
+  font-family: "IBM Plex Mono";
+  color:#ff0000bb;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.Ambessa-n {
+  font-size: 0.88rem;
+}
+.Ambessa-p {
+  margin-top: 1.25rem;
+  font-family: "NotoSerif";
+  font-weight: 350;
+  padding-bottom: 0.62rem;
+  color:#ff0000b8;
+}
+.Ambessa-quote {
+  font-family: "NotoSerif";
+  color:#ff0000ba;
+}
+
+.piltover-bottom {
+  padding-top: 1.88rem;
+  height: 28.12rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+
+#hextech:hover {
+  height: 10.62rem;
+  width: 16.88rem;
+  transform: translateY(-0.5rem);
+  border-color:  rgb(0, 162, 255);
+  box-shadow: 0 0 1.25rem rgb(4, 182, 191);
+}
+.hextech {
+  font-family: "Cinzel";
+  font-weight: 600;
+  color: rgb(200, 223, 255);
+  -webkit-text-stroke: 0.03rem #f6f7f7;
+}
+.hextech-sidebar, .Hextech-card-sidebar, .First-spark-sidebar{
+  border-left: 2px solid rgba(8, 203, 206, 0.819);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(0, 100, 128, 0.259) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(0, 92, 128, 0.158) 5%, transparent 35%),
+  linear-gradient(to bottom,#081011);
+  color: #4294ff
+}
+.hextech-sidebar, .Hextech-card-sidebar, .First-spark-sidebar p{
+  color: rgb(9, 112, 223);
+}
+
+#academy:hover, #council:hover {
+  height: 10.62rem;
+  width: 16.88rem;
+  transform: translateY(-0.5rem);
+  border-color:  rgba(207, 204, 187, 0.805);
+  box-shadow: 0 0 1.25rem rgba(181, 172, 153, 0.979);
+}
+.academy, .council {
+  font-family: "Cinzel";
+  font-weight: 600;
+  color: rgb(99, 97, 86);
+  -webkit-text-stroke: 0.03rem rgb(134, 134, 134);
+}
+.academy-sidebar, .council-sidebar{
+  border-left: 2px solid rgba(184, 183, 164, 0.819);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(114, 117, 104, 0.158) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(106, 106, 88, 0.158) 5%, transparent 35%),
+  linear-gradient(to bottom,#191919);
+  color: #d4d3cbe6
+}
+.academy-sidebar p, .council-sidebar p{
+  color: rgba(201, 212, 201, 0.704)
+}
+
+#Enforcers:hover {
+  height: 10.62rem;
+  width: 16.88rem;
+  transform: translateY(-0.5rem);
+  border-color:  rgba(237, 99, 13, 0.858);
+  box-shadow: 0 0 1.25rem rgba(255, 129, 2, 0.686);
+}
+.Enforcers {
+  font-family: "Cinzel";
+  font-weight: 600;
+  color: rgba(221, 119, 17, 0.889);
+  -webkit-text-stroke: 0.03rem rgb(222, 139, 23);
+}
+.Enforcers-sidebar {
+  border-left: 2px solid rgba(230, 86, 9, 0.933);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(205, 170, 56, 0.137) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(218, 166, 55, 0.111) 5%, transparent 35%),
+  linear-gradient(to bottom,#0f0c00);
+  color: rgb(255, 128, 0)
+}
+.Enforcers-sidebar p {
+  color: rgba(250, 142, 19, 0.808)
+}
+.vander-sacrifice-sidebar {
+  border-left: 2px solid rgba(230, 68, 9, 0.933);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(205, 116, 56, 0.137) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(218, 117, 55, 0.111) 5%, transparent 35%),
+  linear-gradient(to bottom,#0f0400);
+  color: rgba(225, 82, 6, 0.918)
+}
+
+.jinx-birth-sidebar, .council-attack-sidebar {
+  border-left: 2px solid rgba(200, 93, 17, 0.695);
+  background: 
+  radial-gradient(ellipse at bottom right, rgba(76, 56, 41, 0.207) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(68, 50, 36, 0.248) 5%, transparent 35%),
+  linear-gradient(to bottom,#14120e);
+  color: rgba(168, 82, 20, 0.799)
+}
+
+.arcane-piltover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Cinzel";
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.62rem 0.62rem;
+  text-shadow: 0 0.19rem 0.62rem rgba(255, 234, 0, 0.501);
+  color: rgba(242, 204, 15, 0.899)
+}
+
+.hextech-sidebar.active,
+.academy-sidebar.active,
+.Enforcers-sidebar.active,
+.council-sidebar.active {
+  transform: translateX(0);
+}
+
+
+#Season-I {
+  min-height: 200vh;
+  width: 100%;
+  background:
+    radial-gradient(ellipse 180% 140% at 20% 10%, lch(92.99% 89.09 100.11 / 0.122) 5%, transparent 30%),
+    linear-gradient(to bottom, black 60%, rgb(1, 1, 25))
+}
+#S1-img1 {
+  position: relative;
+  width: clamp(14rem, 7rem + 25vw, 25rem);
+  aspect-ratio: 2 / 3;
+  height: auto;
+}
+.Season-1-top {
+  display: flex;
+
+}
+.S1-img1 {
+  top: 6.25rem;
+  left: 10.62rem;
+  position: relative;
+  width: clamp(14rem, 7rem + 25vw, 25rem);
+  aspect-ratio: 2 / 3;
+  height: auto;
+  border: 1px solid rgba(202, 159, 17, 0.947);      
+  border-radius: 0px;
+  padding: 0.38rem;
+  background: linear-gradient(160deg, rgba(255, 196, 0, 0.297), rgba(138,79,255,0.05)), var(--panel);
+}
+
+.S1-img1::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;                              
+  border: 1px solid rgba(202, 159, 17, 0.947);
+  pointer-events: none;
+}
+
+.top-S1-img1 {
+  position: relative;
+  top: 6.25rem;
+  left: 10rem;
+  width: 34.38rem;
+  margin-top: 3.12rem;
+  padding-bottom: 2.50rem;
+}
+.act1{
+  font-family: "IBM Plex Mono";
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(119, 111, 111)
+}
+.the-spark {
+  font-weight: 500;
+  font-family: "Cinzel";
+  font-size: clamp(1.50rem, 1rem + 2vw, 2.38rem);
+  padding-left: 1.25rem;
+  color: rgba(238, 213, 66, 0.851)
+}
+.S1-right {
+  position: relative;
+  top: 12.50rem;
+  left: 5.62rem;
+  width: 50rem;
+  font-family: "NotoSerif";
+  font-size: 0.94rem;
+  color: rgb(253, 255, 205)
+}
+.S1-right h2 {
+  font-family: "Cinzel";
+  font-size: 24;
+  color: var(--gold)
+}
+
+.S1-wrapper h2, .S2-wrapper h2 {
+  width: 100%;
+  margin-left: 38.12rem;
+  margin-top: 18.75rem;
+  font-family: "Cinzel";
+  font-weight:700;
+  font-size: 2.19rem;
+  color: rgba(79, 79, 79, 0.944)
+}
+.S2-wrapper h2 {
+  margin-top: 10rem;
+}
+.S1-wrapper hr, .S2-wrapper hr{
+  width: 30%;
+}
+.S1-bottom, .S2-bottom {
+  margin-top: 4.38rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1.50rem 3.75rem;
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
+  border: 5px solid rgb(0, 208, 255);
+  border-top: none; border-bottom: none;
+  border-radius: 8px;
+  padding: 0.19rem 1.88rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.S2-bottom {
+  border-color: #008ccd8e;
+}
+
+.S1-bottom::-webkit-scrollbar, .S2-bottom::-webkit-scrollbar {
+  display: none;
+}
+
+.S1-cards, .S2-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.62rem;
+  flex: 0 0 auto; 
+}
+.S1-bottom header, .S2-bottom header {
+  font-family: NotoSerif;
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  font-weight: 400
+}
+#First-spark,
+#Hextech-card,
+#Shimmer-card,
+#vander-sacrifice,
+#jinx-birth,
+#council-attack {
+  height: 8.75rem;
+  width: 14.38rem;
+  display: flex;
+}
+.First-spark,
+.Hextech-card,
+.jinx-birth, 
+.council-attack, 
+.Shimmer-card,
+.vander-sacrifice {
+  font-family: "Cinzel";
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: rgba(0, 225, 255, 0.79);
+}
+.vander-sacrifice  {
+  color:#e7502ee3
+}
+.council-attack, .jinx-birth{
+  color: rgba(156, 81, 37, 0.699)
+}
+.Shimmer-card {
+  color: rgba(187, 6, 219, 0.93);
+}
+#First-spark:hover, #Hextech-card:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(0, 162, 255);
+  box-shadow: 0 0 1.25rem rgba(0, 242, 255, 0.266);
+}
+#Shimmer-card:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(195, 0, 255);
+  box-shadow: 0 0 1.25rem rgba(230, 0, 255, 0.447);
+}
+#vander-sacrifice:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(212, 83, 19);
+  box-shadow: 0 0 1.25rem rgba(218, 76, 5, 0.632);
+}
+#jinx-birth:hover, #council-attack:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgba(156, 81, 37, 0.616);
+  box-shadow: 0 0 1.25rem rgba(101, 47, 6, 0.781);
+}
+.the-arcane-sidebar,
+.council-fall-sidebar, 
+.martial-law-sidebar, 
+.warwick-return-sidebar, 
+.noxian-invasion-sidebar, 
+.beyond-time-sidebar, 
+.glorious-evolution-sidebar, 
+.sisters-reunited-sidebar, 
+.final-battle-sidebar, 
+.final-sacrifice-sidebar,
+.First-spark-sidebar,
+.Hextech-card-sidebar,
+.Shimmer-card-sidebar,
+.vander-sacrifice-sidebar,
+.jinx-birth-sidebar,
+.council-attack-sidebar,
+.Enforcers-sidebar,
+.hextech-sidebar,
+.academy-sidebar,
+.council-sidebar,
+.rebellion-sidebar,
+.last-drop-sidebar,
+.shimmer-sidebar, 
+.firelight-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: clamp(18rem, 10rem + 40vw, 32.50rem);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 1000;
+  padding: 2.50rem 1.50rem;
+  box-sizing: border-box;
+}
+
+.the-arcane-sidebar.active,
+.council-fall-sidebar.active, 
+.martial-law-sidebar.active, 
+.warwick-return-sidebar.active, 
+.noxian-invasion-sidebar.active, 
+.beyond-time-sidebar.active, 
+.glorious-evolution-sidebar.active, 
+.sisters-reunited-sidebar.active, 
+.final-battle-sidebar.active, 
+.final-sacrifice-sidebar.active,
+.Hextech-card-sidebar.active,
+.First-spark-sidebar.active,
+.vander-sacrifice-sidebar.active,
+.jinx-birth-sidebar.active,
+.council-attack-sidebar.active,
+.Shimmer-card-sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar-header, .sidebar-h3 {
+  font-weight: 700;
+}
+.arcane-Season-I {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Cinzel";
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.62rem 0.62rem;
+  text-shadow: 0 0.19rem 0.31rem rgba(173, 160, 46, 0.237);
+  color: rgba(226, 190, 7, 0.934)
+}
+
+
+
+#Season-II {
+  min-height: 260vh;
+  width: 100%;
+  background:
+    radial-gradient(ellipse 180% 140% at 20% 10%, lch(44.78% 121.94 314.63 / 0.134) 5%, transparent 30%),
+    linear-gradient(to bottom, black 60%, rgb(0, 15, 24))
+}
+#S2-img1 {
+  position: relative;
+  width: clamp(18rem, 8rem + 55vw, 68.75rem);
+  aspect-ratio: 11 / 5;
+  height: auto;
+}
+.arcane-season2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Cinzel";
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.62rem 0.62rem;
+  text-shadow: 0 0.19rem 0.31rem rgba(137, 46, 173, 0.237);
+  color: var(--violet)
+}
+.Season-2-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.S2-img1 {
+  position: relative;
+  width: clamp(18rem, 8rem + 55vw, 68.75rem);
+  aspect-ratio: 11 / 5;
+  height: auto;
+  border: 1px solid rgba(202, 159, 17, 0.947);      
+  border-radius: 0px;
+  padding: 0.38rem;
+  background: linear-gradient(160deg, rgba(135, 5, 190, 0.466), rgba(179, 79, 255, 0.05)), var(--panel);
+}
+
+.S2-img1::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;                              
+  border: 1px solid rgba(202, 159, 17, 0.947);
+  pointer-events: none;
+}
+
+.top-S2-img1 {
+  width: 40.62rem;
+  margin-top: 3.12rem;
+  padding-bottom: 2.50rem;
+}
+.act3{
+  font-family: "IBM Plex Mono";
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(119, 111, 111)
+}
+.the-reckoning {
+  font-weight: 500;
+  font-family: "Cinzel";
+  font-size: clamp(1.50rem, 1rem + 2vw, 2.38rem);
+  padding-left: 1.25rem;
+  color: var(--violet)
+}
+.S2-middle {
+  margin-top: 1.88rem;
+  border: 2px solid #d000ffd1;
+  border-top: none; border-bottom: none;
+  border-radius: 8px; 
+  padding: 0 1.25rem;
+  margin-left: 3.12rem;
+  width: 80%;
+  font-family: "NotoSerif";
+  font-size: 1.06rem;
+  color: rgba(205, 182, 255, 0.945);
+  padding-left: 1.88rem
+}
+.S2-middle h2 {
+  font-family: "Cinzel";
+  font-size: 1.50rem;
+  margin-left: 33.12rem;
+  color: var(--violet)
+}
+
+#council-fall:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgba(157, 131, 116, 0.616);
+  box-shadow: 0 0 0.94rem rgba(127, 108, 93, 0.401);
+}
+.council-fall {
+  color: rgba(117, 98, 88, 0.778)
+}
+
+#martial-law:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(158, 156, 156);
+  box-shadow: 0 0 0.94rem rgba(133, 132, 132, 0.612);
+}
+.martial-law{
+  color:rgb(196, 195, 195)
+}
+
+#warwick-return:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgba(0, 147, 34, 0.421);
+  box-shadow: 0 0 0.94rem rgba(0, 51, 6, 0.489);
+}
+.warwick-return {
+  color: rgba(0, 147, 34, 0.371)
+}
+
+#noxian-invasion:hover{
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgba(255, 0, 0, 0.719);
+  box-shadow: 0 0 0.94rem rgba(215, 0, 0, 0.489);
+}
+.noxian-invasion {
+  color: rgba(255, 0, 0, 0.686)
+}
+
+#beyond-time:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgba(7, 164, 130, 0.442);
+  box-shadow: 0 0 1.25rem rgba(9, 74, 70, 0.588);
+}
+.beyond-time {
+  color: rgba(0, 151, 133, 0.842)
+}
+
+#warwick-return:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgba(0, 147, 34, 0.421);
+  box-shadow: 0 0 0.94rem rgba(0, 51, 6, 0.489);
+}
+.warwick-return {
+  color: rgba(1, 171, 41, 0.684)
+}
+
+#glorious-evolution:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(2, 202, 233);
+  box-shadow: 0 0 1.38rem rgba(3, 141, 214, 0.853);
+}
+.glorious-evolution {
+  color: rgba(3, 141, 214, 0.853)
+}
+
+#sister-reunited:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(0, 128, 255);
+  box-shadow: 0 0 1.38rem rgba(3, 91, 214, 0.949);
+}
+.sister-reunited {
+  color: rgb(3, 80, 214)
+}
+
+#final-battle:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(246, 255, 0);
+  box-shadow: 0 0 1.38rem rgba(251, 255, 0, 0.878);
+}
+.final-battle {
+  color: rgba(238, 255, 0, 0.826)
+}
+
+#final-sacrifice:hover, #the-arcane:hover {
+  height: 9.06rem;
+  width: 15.94rem;
+  transform: translateY(0.50rem);
+  border-color:  rgb(232, 162, 247);
+  box-shadow: 0 0 1.38rem rgba(209, 167, 215, 0.878);
+}
+.final-sacrifice, .the-arcane {
+  color: rgb(214, 169, 214)
+}
+
+
+.council-fall-sidebar {
+  border-left: 2px solid rgba(157, 131, 116, 0.616);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(127, 108, 93, 0.18) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(117, 98, 88, 0.16) 5%, transparent 35%),
+  linear-gradient(to bottom, #16110e);
+  color: rgba(117, 98, 88, 0.778);
+}
+
+.martial-law-sidebar {
+  border-left: 2px solid rgb(158, 156, 156);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(133, 132, 132, 0.16) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(196, 195, 195, 0.14) 5%, transparent 35%),
+  linear-gradient(to bottom, #121212);
+  color: rgb(196, 195, 195);
+}
+
+.warwick-return-sidebar {
+  border-left: 2px solid rgba(0, 147, 34, 0.421);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(0, 51, 6, 0.18) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(0, 147, 34, 0.14) 5%, transparent 35%),
+  linear-gradient(to bottom, #07110a);
+  color: rgba(4, 162, 41, 0.816);
+}
+
+.noxian-invasion-sidebar {
+  border-left: 2px solid rgba(255, 0, 0, 0.719);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(215, 0, 0, 0.18) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(255, 0, 0, 0.14) 5%, transparent 35%),
+  linear-gradient(to bottom, #140606);
+  color: rgba(255, 0, 0, 0.686);
+}
+
+.beyond-time-sidebar {
+  border-left: 2px solid rgba(7, 164, 130, 0.442);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(9, 74, 70, 0.2) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(0, 151, 133, 0.16) 5%, transparent 35%),
+  linear-gradient(to bottom, #061713);
+  color: rgba(0, 151, 133, 0.842);
+}
+
+.glorious-evolution-sidebar {
+  border-left: 2px solid rgb(2, 202, 233);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(3, 141, 214, 0.18) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(2, 202, 233, 0.14) 5%, transparent 35%),
+  linear-gradient(to bottom, #07131a);
+  color: rgba(3, 141, 214, 0.853);
+}
+
+.sisters-reunited-sidebar {
+  border-left: 2px solid rgb(0, 128, 255);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(3, 91, 214, 0.18) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(0, 128, 255, 0.14) 5%, transparent 35%),
+  linear-gradient(to bottom, #07131e);
+  color: rgb(3, 80, 214);
+}
+
+.final-battle-sidebar {
+  border-left: 2px solid rgb(246, 255, 0);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(251, 255, 0, 0.2) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(238, 255, 0, 0.16) 5%, transparent 35%),
+  linear-gradient(to bottom, #171700);
+  color: rgba(238, 255, 0, 0.826);
+}
+
+.final-sacrifice-sidebar, .the-arcane-sidebar {
+  border-left: 2px solid rgb(232, 162, 247);
+  background:
+  radial-gradient(ellipse at bottom right, rgba(209, 167, 215, 0.2) 5%, transparent 35%),
+  radial-gradient(ellipse at top left, rgba(214, 169, 214, 0.16) 5%, transparent 35%),
+  linear-gradient(to bottom, #140f15);
+  color: rgb(214, 169, 214);
+}
+
+#Legacy {
+  min-height: 300vh;
+  background:
+    radial-gradient(ellipse 180% 140% at 20% 10%, #04526c2a 10%, transparent 40%),
+    linear-gradient(to bottom, rgb(0, 1, 9) 60%, rgb(0, 0, 0), rgba(255, 208, 0, 0.068))
+}
+
+#legacy-img1 {
+  position: relative;
+  width: clamp(18rem, 8rem + 55vw, 68.75rem);
+  aspect-ratio: 11 / 5;
+  height: auto;
+}
+
+.legacy-top {
+  padding-top: 8.12rem;
+  display: flex;
+  flex-direction: column;
+}
+.legacy-img1 {
+  margin-left: 6.25rem;
+  margin-top: 3.12rem;
+  position: relative;
+  width: clamp(18rem, 8rem + 55vw, 68.75rem);
+  aspect-ratio: 11 / 5;
+  height: auto;
+  border: 1px solid rgba(202, 159, 17, 0.947);      
+  padding: 0.31rem;
+  background: linear-gradient(160deg, rgba(1, 63, 89, 0.599), rgba(71, 141, 227, 0.059)), var(--panel);
+}
+
+.legacy-img1::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;                              
+  border: 1px solid rgba(202, 159, 17, 0.947);
+  pointer-events: none;
+}
+
+.legacy-top-img1 {
+  padding-left: 3.75rem;
+}
+.legacy{
+  font-family: "Cinzel";
+  font-size: clamp(2rem, 1.20rem + 3vw, 3.69rem);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(220, 206, 9, 0.94)
+}
+.the-ashes {
+  font-weight: 500;
+  font-family: "Cinzel";
+  font-size: clamp(1.50rem, 1rem + 2vw, 2.38rem);
+  padding-left: 1.25rem;
+  color: #138bafec
+}
+.legacy-middle {
+  margin-left: 4.38rem;
+  padding: 0 1.88rem;
+  font-weight: 350;
+  width: 60%;
+  font-family: "NotoSerif";
+  font-size: 1.19rem;
+  color: rgba(158, 200, 209, 0.84);
+  margin-bottom: 10rem;
+}
+.legacy-middle h2 {
+  font-family: "Cinzel";
+  font-size: 1.56rem;
+  color: rgb(13, 180, 189)
+}
+
+
+.legacy-box{
+  border: 2px solid rgb(255, 221, 0);
+  position:relative;
+  margin: 0 auto;
+  width: clamp(18rem, 6rem + 60vw, 75rem);
+  aspect-ratio: 2 / 1;
+  height: auto;
+  overflow: hidden;  width: 80dvw;
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.599));
+  box-shadow: 0 0 3.12rem rgba(255, 217, 0, 0.149);
+}
+
+#main-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity .35s;
+}
+
+.legacy-box::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0,0,0,.25),
+      transparent
+  );
+  pointer-events:none;
+}
+
+.legacy-info{
+  font-family: "NotoSerif";
+  position: absolute;
+  left: 2.50rem;
+  bottom: 1.25rem;
+  width: 43.75rem;
+  color: rgb(244, 239, 202);
+  z-index: 10;
+}
+
+.legacy-info h2{
+  font-family: "Cinzel";
+  font-size: 2.12rem;
+  margin-bottom: 1.25rem;
+}
+
+.legacy-info p{
+  font-size: 1rem;
+  font-weight: 350;
+  line-height: 1.5;
+}
+
+.legacy-quote{
+  position: absolute;
+  right: 1.12rem;
+  bottom: 1.12rem;
+  white-space: nowrap;
+  text-align: right;
+  font-family: "Cinzel";
+  font-size: 1rem;
+  line-height: 1;
+  color: rgb(231, 229, 184);
+  text-shadow: 0 0.12rem 0.50rem rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+.legacy-bottom{
+  display:flex;
+  margin-top:4.38rem;
+  width: 90dvw;
+  margin-inline-end: 3rem;
+}
+
+.legacy-cards{
+  margin-left:2.2rem;
+}
+
+.legacy-card{
+  width:15.62rem;
+  height:8.75rem;
+  overflow:hidden;
+  cursor:pointer;
+  border:2px solid rgb(170, 170, 170);
+  transition:.3s;
+  border-radius: 4px;
+}
+
+.legacy-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.legacy-card:hover{
+  transform:translateY(-0.5rem);
+}
+
+.legacy-card.active{
+  border-radius: 8px;
+  border:3px solid var(--gold);
+  box-shadow: 0 0 0.88rem rgba(255, 217, 0, 0.385);
+}
+
+.legacy-cards header{
+  font-family: "IBM Plex Mono";
+  font-weight: 550;
+  text-transform: uppercase;
+  font-size:1rem;
+  text-transform:uppercase;
+  margin-top:0.62rem;
+  text-align:center;
+  color: rgb(255, 242, 172)
+}
+
+.fade{
+  opacity:0;
+}
+
+#End {
+  margin-top: 15.62rem;
+  min-height: 35vh;
+  border-top: 1px solid var(--gold);
+  background-color:#07090a
+}
+.footertop {
+  display: flex;
+  gap: 3.75rem;
+  margin-left: 10.31rem;
+  margin-top: 3.12rem;
+}
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  color: rgb(116, 125, 125);
+  font-size: 0.94rem;
+  font-family: "IBM Plex Mono";
+}
+.footer-top span {
+  color: rgb(227, 215, 148)
+}
+
+.footerbottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  margin-top: 3.12rem;
+  margin-left: 9.38rem;
+  margin-right: 1.88rem;
+}
+.footer-arcane {
+  flex-basis: 100%;
+  margin-left: 0.94rem;
+  margin-bottom: 0.62rem;
+  font-size: 1.69rem;
+  color: rgb(124, 122, 115);
+  font-family: "NotoSerif";
+  font-weight: 550;
+}
+.footerbottom i{
+  font-size: 1.88rem;
+  color: #d4c49a; 
+  transition: 0.3s;
+}
+
+.footerbottom a{
+  text-decoration: none;
+  margin: 0 0.94rem;
+}
+
+.footerbottom a:last-of-type {
+  margin-left: auto;
+}
+
+.footerbottom i:hover{
+  color: #ffdc68; 
+  transform: scale(1.15);
+}
+
+#github {
+  color: white;
+  font-size: 3.12rem;
+}
+
+.footer-info {
+  color: rgb(124, 122, 115);
+  flex-basis: 100%;
+  margin-left: 0.94rem;
+  margin-bottom: 1.25rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.81rem;
+  line-height: 1.7;
+}
+
+
+@media (max-width: 64rem) {
+
+  #Overview {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2.50rem;
+    padding-right: 2.50rem;
+    height: auto;
+    gap: 1.88rem;
+  }
+  .left { width: 100%; align-items: center; }
+  .right { width: 100%; max-width: 37.50rem; margin-top: 1.25rem; }
+
+  .bottom { flex-direction: column; align-items: center; }
+  .series-info { margin-left: 0; top: 2.50rem; }
+
+  .Zaun-top, .piltover-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .zaun-left-flex, .piltover-left-flex {
+    width: 100%;
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+  }
+  .zaun-middle-flex, .piltover-middle-flex {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 2.50rem;
+    align-items: center;
+  }
+  .zaun-p, .piltover-p { width: 100%; }
+
+  .zaun-figures, .piltover-figures {
+    position: static;
+    text-align: center;
+    width: 100%;
+    margin: 2.50rem 0 0 0;
+  }
+
+  #zaun-images, #piltover-images { margin-top: 3.75rem; }
+
+  .zaun-top-images, .zaun-bottom-images,
+  .piltover-top-images, .piltover-bottom-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.50rem;
+    padding-bottom: 2.50rem;
+  }
+
+  /* The desktop layout staggers these cards with hand-placed
+     top/left/bottom offsets meant for a 3-across row. Once they stack
+     in a column those offsets have no meaning, so they're reset. */
+  #zaun-vander, #zaun-silco, #zaun-singed,
+  #zaun-ekko, #zaun-vi, #zaun-jinx,
+  #piltover-Heimerdinger, #piltover-viktor, #piltover-jayce,
+  #piltover-Ambessa, #piltover-caitlyn, #piltover-Mel,
+  .vander-text, .silco-text, .singed-text,
+  .ekko-text, .vi-text, .jinx-text,
+  .Heimerdinger-text, .viktor-text, .jayce-text,
+  .Ambessa-text, .caitlyn-text, .Mel-text {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .zaun-bottom, .piltover-bottom {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 1.50rem;
+    padding: 1.88rem 1.25rem;
+  }
+
+  .Season-1-top { flex-direction: column; align-items: center; }
+  .top-S1-img1 { left: 0; width: 90%; margin: 1.25rem auto 0; text-align: center; }
+  .S1-img1 { left: 0; top: 0; }
+  .S1-right { left: 0; top: 0; width: 90%; margin: 1.25rem auto; }
+
+  .top-S2-img1 { width: 90%; }
+  .S2-middle { margin-left: 0; width: 90%; padding-left: 1.25rem; }
+  .S2-middle h2 { margin-left: 0; text-align: center; }
+
+  .S1-wrapper h2, .S2-wrapper h2 { margin-left: 0; text-align: center; }
+  .S1-bottom, .S2-bottom { margin-left: 1.25rem; margin-right: 1.25rem; }
+
+  .legacy-middle { margin-left: 1.25rem; width: 90%; }
+  .legacy-box, .legacy-img1 { margin-left: 1.25rem; }
+  .legacy-bottom { flex-wrap: wrap; justify-content: center; margin-top: 2.50rem; }
+  .legacy-cards { margin: 0.62rem 1.25rem; }
+
+  .footertop { flex-wrap: wrap; margin-left: 2.50rem; gap: 1.88rem; }
+  .footerbottom { margin-left: 2.50rem; margin-right: 1.25rem; }
+  .footer-info { margin-right: 1.25rem; }
+}
+
+/* ---------- PHONE (<=37.50rem / 600px) ---------- */
+@media (max-width: 37.50rem) {
+
+  /* Nav */
+  .top-row {
+    flex-direction: column;
+    height: auto;
+    padding: 0.62rem 0;
+    position: relative;
+  }
+  #Arcane { margin: 0 0 0.50rem 0.94rem; font-size: 1.38rem; }
+  .top-center {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    gap: 0.62rem;
+    font-size: 0.69rem;
+    justify-content: center;
+    margin-bottom: 0.50rem;
+  }
+  .top-right {
+    justify-content: center;
+    margin: 0;
+    font-size: 1.12rem;
+    gap: 0.88rem;
+  }
+  .page2 { padding-top: 8.75rem; }
+
+  /* Hero */
+  .center-texts { top: 5.62rem; gap: 0.62rem; }
+  .top-arcane { font-size: 0.69rem; text-align: center; }
+
+  .overview { margin-left: 1.25rem; }
+  #Overview { padding-left: 0.94rem; padding-right: 0.94rem; top: 6.25rem; }
+  .p { font-size: 0.88rem; }
+
+  .series-info { width: 92vw; font-size: 0.69rem; padding: 0.94rem; }
+  .info-item { flex-wrap: wrap; }
+  .label { min-width: auto; }
+
+  /* Zaun / Piltover headers */
+  .zaun-text, .piltover-text { font-size: clamp(1.75rem, 1rem + 8vw, 2.75rem); }
+  .undercity-text, .topside-text { font-size: 0.88rem; text-align: center; }
+  .zaun-p, .piltover-p { font-size: 0.88rem; padding: 0 0.62rem; }
+  .small-zaun, .small-piltover { font-size: 1.12rem; }
+
+  .zaun-figures, .piltover-figures { font-size: clamp(1.50rem, 1rem + 5vw, 1.75rem); }
+
+  .zaun-images, .piltover-images,
+  #zaun-vander, #zaun-silco, #zaun-singed, #zaun-ekko, #zaun-vi, #zaun-jinx,
+  #piltover-Heimerdinger, #piltover-viktor, #piltover-jayce,
+  #piltover-Ambessa, #piltover-caitlyn, #piltover-Mel {
+    width: 85vw;
+    max-width: 16.25rem;
+    height: auto;
+    margin-left: 0 !important;
+  }
+  .vander-text, .silco-text, .singed-text, .ekko-text, .vi-text, .jinx-text,
+  .Heimerdinger-text, .viktor-text, .jayce-text,
+  .Ambessa-text, .caitlyn-text, .Mel-text {
+    width: 85vw;
+    max-width: 16.25rem;
+    margin-left: 0 !important;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .zaun-card {
+    width: 44vw;
+    height: 6.88rem;
+  }
+  .zaun-card p { font-size: 1rem; }
+  #shimmer:hover, #firelight:hover, #the-last-drop:hover, #the-rebellion:hover,
+  #hextech:hover, #academy:hover, #council:hover, #Enforcers:hover {
+    width: 46vw;
+    height: 7.50rem;
+  }
+  .zaun-bottom, .piltover-bottom { gap: 0.88rem; padding: 1.25rem 0.62rem; }
+  .arcane-zaun, .arcane-piltover { font-size: 0.81rem; padding: 0.38rem; }
+
+  .sidebar-header { font-size: 1.25rem; }
+  .sidebar-p { font-size: 0.75rem; }
+
+  /* Season sections */
+  .act1, .act3 { font-size: 0.81rem; text-align: center; }
+  .the-spark, .the-reckoning { padding-left: 0; text-align: center; }
+  .top-S1-img1, .top-S2-img1 { width: 90%; text-align: center; }
+  .S1-right, .S2-middle { font-size: 0.81rem; padding: 0 0.62rem; }
+  .S2-middle { border-left: none; border-right: none; padding-left: 0.62rem; }
+  .S2-middle h2 { font-size: 1.25rem; }
+
+  .S1-wrapper h2, .S2-wrapper h2 { font-size: 1.50rem; margin-top: 3.75rem; }
+  .S1-bottom, .S2-bottom {
+    margin-left: 0.62rem;
+    margin-right: 0.62rem;
+    padding: 0.19rem 0.62rem;
+    gap: 1.25rem 1.88rem;
+  }
+  #First-spark, #Hextech-card, #Shimmer-card, #vander-sacrifice,
+  #jinx-birth, #council-attack,
+  #council-fall, #martial-law, #warwick-return, #noxian-invasion,
+  #beyond-time, #sister-reunited, #glorious-evolution, #final-battle,
+  #final-sacrifice, #the-arcane {
+    width: 70vw;
+    height: 6.88rem;
+  }
+  .S1-bottom header, .S2-bottom header { font-size: 0.88rem; text-align: center; }
+
+  .legacy { font-size: clamp(1.75rem, 1rem + 6vw, 2.12rem); }
+  .the-ashes { padding-left: 0; display: block; }
+  .legacy-top-img1 { padding-left: 0.94rem; }
+  .legacy-middle { margin-left: 0.94rem; font-size: 0.88rem; margin-bottom: 3.75rem; }
+  .legacy-middle h2 { font-size: 1.25rem; }
+  .legacy-img1, .legacy-box { margin-left: 0.94rem; }
+  .legacy-info { left: 0.94rem; bottom: 0.94rem; width: 85%; }
+  .legacy-info h2 { font-size: 1.38rem; margin-bottom: 0.50rem; }
+  .legacy-info p { font-size: 0.81rem; }
+  .legacy-quote { font-size: 0.69rem; right: 0.62rem; bottom: 0.62rem; }
+  .legacy-card { width: 40vw; height: 6.25rem; }
+  .legacy-cards { margin-left: 0.5em; }
+  .legacy-cards header { font-size: 0.69rem; }
+
+  /* Footer */
+  .footertop { margin-left: 0.94rem; gap: 1.25rem; }
+  .footer-top { font-size: 0.75rem; }
+  .footerbottom { margin-left: 0.94rem; margin-right: 0.94rem; }
+  .footer-arcane, .footer-info { margin-left: 0; }
+  .footer-arcane { font-size: 1.25rem; }
+  .footerbottom a { margin: 0 0.50rem; }
+  .footerbottom a:last-of-type { margin-left: auto; }
+  .footerbottom i { font-size: 1.50rem; }
+  #github { font-size: 2rem; }
+}
+
