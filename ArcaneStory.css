@@ -1686,16 +1686,16 @@ body {
   color: rgba(238, 213, 66, 0.851)
 }
 .S1-right {
+ color: rgb(234, 231, 215);
   position: relative;
   top: 12.50rem;
   left: 5.62rem;
   width: 50rem;
   font-family: "NotoSerif";
   font-size: 0.94rem;
-  color: rgb(253, 255, 205)
 }
 .S1-right h2 {
-  font-family: "Cinzel";
+  font-family: "Cinzel" !important;
   font-size: 24;
   color: var(--gold)
 }
@@ -2662,7 +2662,6 @@ body {
   #github { font-size: 2rem; }
 }
 
-.S1-right p {color: rgb(234, 231, 215) !important}
 .legacy-middle p {color: rgb(171, 191, 208) !important; line-height: 2rem;}
 .S2-wrapper > h2,
 .S1-wrapper > h2 { color: rgb(209, 204, 133) !important}
