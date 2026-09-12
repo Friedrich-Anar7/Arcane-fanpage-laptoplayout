@@ -2487,9 +2487,6 @@ body {
     padding-bottom: 2.50rem;
   }
 
-  /* The desktop layout staggers these cards with hand-placed
-     top/left/bottom offsets meant for a 3-across row. Once they stack
-     in a column those offsets have no meaning, so they're reset. */
   #zaun-vander, #zaun-silco, #zaun-singed,
   #zaun-ekko, #zaun-vi, #zaun-jinx,
   #piltover-Heimerdinger, #piltover-viktor, #piltover-jayce,
@@ -2665,6 +2662,8 @@ body {
   #github { font-size: 2rem; }
 }
 
+.S1-right p {color: rgb(234, 231, 215) !important}
+.legacy-middle p {color: rgb(171, 191, 208) !important; line-height: 2rem;}
 .S2-wrapper > h2,
 .S1-wrapper > h2 { color: rgb(209, 204, 133) !important}
 .S2-bottom,
