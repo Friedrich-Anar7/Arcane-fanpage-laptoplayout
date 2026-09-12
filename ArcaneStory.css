@@ -2665,3 +2665,8 @@ body {
   #github { font-size: 2rem; }
 }
 
+.S2-wrapper > h2,
+.S1-wrapper > h2 { color: rgb(209, 204, 133) !important}
+.S2-bottom,
+.S1-bottom { border-inline: 3px solid rgb(144, 146, 73) !important; border-radius: 1px !important;}
+.S2-middle { border-inline: 2px solid rgb(101, 52, 130) !important; line-height: 1.8rem;}
