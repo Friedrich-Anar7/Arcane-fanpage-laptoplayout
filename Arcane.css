@@ -795,7 +795,8 @@ body a{ text-decoration: none;  color: inherit;}
 }
 .S1-trailers {
   display: flex;  gap: 2.5rem;
-  justify-content: center;   align-items: center;
+  margin: 0 auto;
+  align-items: center;
   justify-self: center;
   height: 80%;  width: 90%;  
 }
@@ -820,9 +821,8 @@ body a{ text-decoration: none;  color: inherit;}
 }
 .S1-trailer {
   position: relative;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: center;  justify-content: center;
   height: 17rem;  width: 30rem;
   border: 1.5px solid rgba(8, 58, 97, 0.562);
   font-family: "IBM Plex Mono";
