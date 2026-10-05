@@ -1495,7 +1495,7 @@ body:has(#tab-3[aria-selected="true"]) .plaque {  background: linear-gradient(18
 }
 .S2-rating,
 .S1-rating {
-  width: 90%;
+  width: 83%;
   margin: 0 auto;
 }
 .S2-rating h3,
