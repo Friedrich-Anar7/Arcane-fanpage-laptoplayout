@@ -379,7 +379,7 @@ body {
 
 #Zaun {
   width: 100%;
-  min-height: 305vh;
+  min-height: 290vh;
   background:
     radial-gradient(ellipse at 15% 20%, rgba(47, 233, 152, 0.097) 10%, transparent 30%),
     radial-gradient(ellipse 140% 80% at 50% 63%, rgba(57, 168, 129, 0.095) 3%, transparent 13%),
@@ -1080,7 +1080,7 @@ body {
 
 #Piltover {
   width: 100%;
-  min-height: 305vh;
+  min-height: 290vh;
   background:
     radial-gradient(ellipse at 15% 20%, rgba(242, 210, 31, 0.147)10%, transparent 30%),
     radial-gradient(ellipse at top right, rgba(206, 175, 1, 0.073)5%, transparent 50%),
